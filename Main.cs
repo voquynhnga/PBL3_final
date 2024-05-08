@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL_qnv
+namespace PBL3
 {
     public partial class Main : Form
     {

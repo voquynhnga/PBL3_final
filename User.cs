@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PBL_qnv
+namespace PBL3
 {
     public class User
     {

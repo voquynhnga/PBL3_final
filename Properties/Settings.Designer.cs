@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL_qnv.Properties
+namespace PBL3.Properties
 {
 
 
