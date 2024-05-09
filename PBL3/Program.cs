@@ -14,7 +14,8 @@ namespace PBL3
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles();'
+                as'
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
