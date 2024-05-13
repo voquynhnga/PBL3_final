@@ -1,6 +1,6 @@
 ﻿namespace PBL3
 {
-    partial class Login
+    partial class Loginform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loginform));
             this.label1 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.bLogin = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.bWatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -100,7 +99,7 @@
             this.bWatch.UseVisualStyleBackColor = true;
             this.bWatch.Click += new System.EventHandler(this.bWatch_Click);
             // 
-            // Login
+            // Loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,8 +110,8 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.label1);
-            this.Name = "Login";
-            this.Text = "Form1";
+            this.Name = "Loginform";
+            this.Text = "Loginform";
             this.Load += new System.EventHandler(this.Login_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
@@ -127,7 +126,6 @@
         private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button bLogin;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.Button bWatch;
     }

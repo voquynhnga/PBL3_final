@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PBL3
+namespace PBL_qnv.BLL
 {
-    public class User
+    internal class Type
     {
-        public String user_name { get; set; }
-        public String password { get; set; }
-
+        public int ID {  get; set; }
+        public string Name { get; set; }
     }
 }

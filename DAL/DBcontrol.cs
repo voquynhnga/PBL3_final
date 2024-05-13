@@ -19,7 +19,7 @@ namespace PBL3
             {
                 if (instance == null)
                 {
-                    string s = "Data Source=NGANGUNGO;Initial Catalog=DATA_PBL3;Integrated Security=True";
+                    string s = "Data Source=NGANGUNGO;Initial Catalog=PBL3;Integrated Security=True";
                     instance = new DBcontrol(s);
                 }
                 return instance;
@@ -49,59 +49,64 @@ namespace PBL3
                     sql = sql.Replace(parameter.ParameterName, $"'{parameter.Value}'");
                 }
             }
+
             SqlCommand cmd = new SqlCommand(sql, cnn);
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
 
-        public DataTable ExecuteQuery(string query, SqlParameter[] parameters)
+     
 
+
+        public DataTable ExcuteQuery(string query, SqlParameter[] parameters)
         {
-
             DataTable result = new DataTable();
-
-
-
-            using (cnn)
-
+            using (SqlConnection connection = new SqlConnection(cnn.ConnectionString))
             {
-
-                using (SqlCommand command = new SqlCommand(query, cnn))
-
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-
-                    //command.Parameters.AddRange(parameters);
-
                     if (parameters != null)
                     {
-                        //foreach (var parameter in parameters)
-                        //{
-                        //    query = query.Replace(parameter.ParameterName, $"'{parameter.Value}'");
-                        //}
                         command.Parameters.AddRange(parameters);
-
                     }
-
-                    cnn.Open();
-
+                    connection.Open();
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-
                     {
-
                         adapter.Fill(result);
-
                     }
-
                 }
-
             }
-
             return result;
+        }
 
+        public object ExcuteDBScalar(string query, SqlParameter[] parameters)
+        {
+            object result = null;
+            try
+            {
+                cnn.Open();
+                using (SqlCommand command = new SqlCommand(query, cnn))
+                {
+                    if (parameters != null)
+                    {
+                        command.Parameters.AddRange(parameters);
+                    }
+                    result = command.ExecuteScalar();
+                }
+            }
+            finally
+            {
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
+            }
+            return result;
         }
 
     }
+}
 
     //public DataTable ExcuteDB(string query, SqlParameter[] parameters)
     //{
@@ -122,7 +127,7 @@ namespace PBL3
     //}
 
 
-}
+
 
 
 

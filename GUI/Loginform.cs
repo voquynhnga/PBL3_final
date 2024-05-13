@@ -7,20 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Collections;
 namespace PBL3
 
 {
 
-    public partial class Login : Form
+    public partial class Loginform : Form
     {
         String query;
         private bool showPassword = false;
-        Controller ctrl = new Controller();
-        Main mf = new Main();
+        Mainform mf = new Mainform();
+        public User currentuser = new User { 
+            user_name = "",
+            password = ""
+        };
 
 
-        public Login()
+        public Loginform()
         {
             InitializeComponent();
             KeyPreview = true;
@@ -58,15 +61,15 @@ namespace PBL3
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            User t = new User()
-            {
-                user_name = txtuser.Text,
-                password = txtPass.Text
-            };
-            int check = ctrl.Check_user(t);
+            Controller.Instance.SetUser(currentuser,txtuser.Text, txtPass.Text);
+            User t = GetUser();
+
+
+
+            int check = Controller.Instance.Check_user(t);
             if (check == 0) {
                 mf.Show();
-                this.Hide();
+                //this.Hide();
 
             }
             if (check == 1)
@@ -106,5 +109,10 @@ namespace PBL3
 
 
         }
+        public User GetUser()
+        {
+            return currentuser;
+        }
+
     }
 }
