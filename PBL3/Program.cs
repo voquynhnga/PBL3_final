@@ -14,7 +14,12 @@ namespace PBL3
         [STAThread]
         static void Main()
         {
+<<<<<<< HEAD
             Application.EnableVisualStyles();
+=======
+            Application.EnableVisualStyles();'
+                as'
+>>>>>>> 002e2752d0892aa91a43217ac0891ebdd9807d9c
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }

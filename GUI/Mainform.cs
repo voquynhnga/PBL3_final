@@ -14,20 +14,38 @@ namespace PBL3
     public partial class Mainform : Form
     {
         private Form currentFormChild;
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
-            if(currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            //if (currentFormChild != null)
+
+            //{
+
+            //    if (!currentFormChild.IsDisposed)
+
+            //    {
+
+            //        currentFormChild.Close();
+
+            //    }
+
+            //}
+
             currentFormChild = childForm;
+
             childForm.TopLevel = false;
+
             childForm.FormBorderStyle = FormBorderStyle.None;
+
             childForm.Dock = DockStyle.Fill;
+
             panel1.Controls.Add(childForm);
+
             panel1.Tag = childForm;
+
             childForm.BringToFront();
+
             childForm.Show();
+
         }
         public Mainform()
         {
@@ -159,7 +177,7 @@ namespace PBL3
 
         private void T6_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ManageCustomer());
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

@@ -12,6 +12,8 @@ namespace PBL3.GUI
 {
     public partial class Bill : Form
     {
+        Mainform mf = Application.OpenForms["MainForm"] as Mainform;
+
         public Bill()
         {
             InitializeComponent();
@@ -25,14 +27,14 @@ namespace PBL3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OrderForm orderForm = Application.OpenForms["OrderForm"] as OrderForm;
+            OrderForm orderForm = OrderForm.Instance;
 
             if (orderForm != null)
 
             {
 
-                orderForm.Show();
-                this.Hide();
+               // this.Hide();
+                mf.OpenChildForm(orderForm);
 
             }
 
@@ -62,5 +64,20 @@ namespace PBL3.GUI
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mf.OpenChildForm(new Bill1());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận hủy", "Xác nhận", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+                mf.Show();
+            }
+        }
     }
 }

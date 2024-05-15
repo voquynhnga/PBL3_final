@@ -15,12 +15,15 @@ namespace PBL3.GUI
     public partial class OrderForm : Form
     {
         ManageProduct m = new ManageProduct();
+        Mainform mf = Application.OpenForms["MainForm"] as Mainform;
+        public static OrderForm Instance;
+
         public OrderForm()
         {
             InitializeComponent();
 
              m.AddProductEvent += AddProduct;
-
+            Instance = this;
 
         }
 
@@ -203,9 +206,8 @@ namespace PBL3.GUI
 
         private void bTT_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Bill b = new Bill();
-            b.Show();
+           // this.Hide();
+            mf.OpenChildForm(new Bill());
         }
         public List<Button> Getbutton()
         {

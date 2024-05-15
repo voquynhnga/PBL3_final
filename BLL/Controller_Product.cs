@@ -7,6 +7,9 @@ using PBL3.DAL;
 using PBL3;
 using PBL_qnv.BLL;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Xml.Linq;
+using System.Data;
 
 namespace PBL3.BLL
 {
@@ -25,6 +28,29 @@ namespace PBL3.BLL
                 return instance;
             }
             private set { }
+        }
+        public DataTable Search_Product(int flag, Product p)
+        {
+            DataTable dt = new DataTable();
+            if (flag == 1)
+            {
+                query = "select * from MatHang where TenHang like @Name";
+                SqlParameter[] pa = new SqlParameter[]
+{
+                    new SqlParameter("@Name","%" + p.Name + "%")
+};
+                dt = DBcontrol.Instance.ExcuteQuery(query, pa);
+
+
+            }
+            else
+            {
+                query = "select * from MatHang";
+                dt = DBcontrol.Instance.ExcuteQuery(query, null);
+
+            }
+
+            return dt;
         }
 
     }
