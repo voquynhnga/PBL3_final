@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PBL3.GUI;
+using PBL3_qnv.GUI;
+using PBL3;
+using PBL3.GUI_NV;
 
-namespace PBL3
+namespace PBL3_qnv
 {
     internal static class Program
     {
@@ -17,7 +19,7 @@ namespace PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mainform());
+            Application.Run(new Loginform());
         }
     }
 }

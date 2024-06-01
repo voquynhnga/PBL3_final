@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1b34b35af8ec4568acf0f7426c3f6a3f" Name="Diagram1">
+        <EntityTypeShape EntityType="Model1.ChiTietDonHang" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ChiTietSanPham" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Color" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.DonHang" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.KhachHang" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.LoaiHang" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.LoHang" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.NhaCungCap" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.NhanVien" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.SanPham" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Size" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TaiKhoan" Width="1.5" PointX="5.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.LichLam" Width="1.5" PointX="5.25" PointY="24" IsExpanded="true" />
+        <AssociationConnector Association="Model1.FK__ChiTietDo__ID_CT__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietDo__ID_Ho__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietSa__color__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietSa__ID_Lo__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietSa__ID_Lo__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietSa__produ__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ChiTietSa__size___4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__DonHang__ID_KH__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__DonHang__ID_NV__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__LoHang__ID_NCC__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__LichLam__ID_NV__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__TaiKhoan__ID_NV__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,24 +1,33 @@
-﻿using PBL3.BLL;
+﻿using DevExpress.Data.Browsing;
+using DevExpress.XtraEditors;
+using PBL3;
+//using PBL3_qnv.BLL;
 using PBL3.DAL;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3
+namespace PBL3_qnv
 {
     public class Controller
     {
-        string query;
+        // string query;
         //Main mf = new Main();
         //private Main mf;
         //private Login lg;
+        static Loginform lg = Application.OpenForms["Loginform"] as Loginform;
         private static Controller instance;
+        public static TaiKhoan user = lg.GetUser();
+       QLCH_3Entities db = new QLCH_3Entities();
+
 
         public static Controller Instance
         {
@@ -33,88 +42,257 @@ namespace PBL3
             private set { }
         }
 
-        public int Check_user(User user)
+        public int Check_user(TaiKhoan user)
+
         {
-            query = "SELECT MatKhau FROM [TaiKhoan] WHERE TaiKhoan = @username";
- 
-            
-            SqlParameter[] parameters = new SqlParameter[] {
-                 new SqlParameter("@username", user.user_name)
-             };
 
-            DataTable result = DBcontrol.Instance.ExcuteQuery(query, parameters);
 
-            if (result.Rows.Count > 0)
+
+            var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+
+            if (userFromDB != null)
+
             {
-                string passwordFromDB = result.Rows[0]["MatKhau"].ToString();
 
-                if (user.password == passwordFromDB)
+                if (userFromDB.MatKhau == user.MatKhau)
+
                 {
 
                     return 0;
 
                 }
-                else if (user.password.Length != 8 || !IsNumeric(user.password))
+
+                else if (user.MatKhau.Length != 8 || !IsNumeric(user.MatKhau))
+
                 {
+
                     return 1;
+
                 }
+
                 else
+
                 {
+
                     return 2;
 
                 }
+
             }
-            else
-            {
-                return 3;
-            }
+
+            return 3;
+
+
+
         }
 
-        private bool IsNumeric(string input)
+        public int Check_type(TaiKhoan user)
+
         {
-            foreach (char c in input)
+
+
+
+            var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+
+
+
+            if (userFromDB != null)
+
             {
-                if (!char.IsDigit(c))
+
+                if (userFromDB.Loai_TK == "Nhân viên")
+
                 {
+
+                    return 1;
+
+                }
+
+                if (userFromDB.Loai_TK == "Chủ cửa hàng")
+                {
+
+                    return 2;
+
+                }
+
+            }
+
+            return 0;
+
+        }
+
+    
+
+        public void SavePass(TaiKhoan user)
+
+        {
+
+
+
+                var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+
+                if (userFromDB != null)
+
+                {
+
+                    userFromDB.MatKhau = user.MatKhau;
+                    db.SaveChanges();
+
+                }
+
+            
+
+        }
+
+        public bool IsNumeric(string input)
+
+        {
+
+            foreach (char c in input)
+
+            {
+
+                if (!char.IsDigit(c))
+
+                {
+
                     return false;
+
+                }
+
+            }
+
+            return true;
+
+        }
+        public int Get_ID(string username)
+        {
+
+                var user = db.TaiKhoans
+                             .Where(t => t.TaiKhoan1 == username)
+                             .FirstOrDefault();
+
+                if (user != null)
+                {
+                    return user.ID_NV;
+                }
+                else
+                {
+                    throw new Exception("User not found");
+                }
+            
+        }
+        public NhanVien Get_NV(TaiKhoan user)
+        {
+            string usrname = user.TaiKhoan1.ToString();
+            int id_nv = Get_ID(usrname); 
+            using (var DB = new QLCH_3Entities())
+            {
+                var nhanVien = DB.NhanViens.FirstOrDefault(nv => nv.ID_NV == id_nv); 
+                if (nhanVien != null)
+                {
+                    return nhanVien;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy Nhân viên có ID_NV tương ứng với user.");
+                    return null;
+                    // Xử lý khi không tìm thấy NhanVien tương ứng
                 }
             }
-            return true;
         }
+        public void SetUser(TaiKhoan u, string name, string pass)
 
-        public void SavePass(User user)
         {
-            query = "UPDATE TaiKhoan SET MatKhau = @password WHERE TaiKhoan = @user_name";
-            SqlParameter[] parameter = new SqlParameter[]
+
+            u.TaiKhoan1 = name;
+
+            u.MatKhau = pass;
+
+        }
+        public void Savein4_NV(string n, string sdt, string e, string gt, DateTime d, string cc, string p)
+        {
+            string usrname = user.TaiKhoan1.ToString();
+            int id_nv = Get_ID(usrname);
+            NhanVien nv = Get_NV(user);
+            using (var DB = new QLCH_3Entities())
             {
-                new SqlParameter("@password", user.password),
-                new SqlParameter("@user_name", user.user_name),
+                var nhanVien = DB.NhanViens.FirstOrDefault(nv1 => nv1.ID_NV == id_nv);
+                if (nhanVien != null)
+                {
+                    // Lấy thông tin từ các TextBox
+                    nhanVien.NameNV = n;
+                    nhanVien.SDT = sdt;
+                    nhanVien.Email = e;
+                    nhanVien.GT = gt;
+                    nhanVien.NS = d;
+                    nhanVien.CCCD = cc;
+                    nhanVien.ChucVu = p;
 
-            };
-            DBcontrol.Instance.ExcuteDB(query, parameter);
+                    // Lưu các thay đổi vào cơ sở dữ liệu
+                    DB.SaveChanges();
+                }
+                else
+                {
+                    // Xử lý trường hợp không tìm thấy NhanVien với ID_NV tương ứng
+                    MessageBox.Show("Không tìm thấy nhân viên với ID_NV tương ứng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
 
         }
-        public void SetUser(User u, string name, string pass)
+        public KhachHang GetKH_SearchBill(string txt)
         {
-            u.user_name = name;
+            //DataTable dt = new DataTable();
 
-            u.password = pass;
+            //KhachHang cus = null;
+            //if (IsNumeric(txt))
+            //{
+            //    query = "select * from KhachHang where SDT = @Name";
+            //    SqlParameter[] pa = new SqlParameter[]
+            //    {
+            //        new SqlParameter("@Name",txt)
+            //     };
+            //    dt = DBcontrol.Instance.ExcuteQuery(query, pa);
+
+            //}
+
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    cus = GetKH_DB(dr);
+            //}
+            //return cus;
+
+            KhachHang cus = null;
+
+
+
+            if (IsNumeric(txt))
+
+            {
+
+
+                cus = db.KhachHangs.FirstOrDefault(kh => kh.SDT == txt);
+
+            }
+            else XtraMessageBox.Show("Vui lòng nhập số điện thoại");
+
+
+
+            return cus;
+
+
+
 
         }
-
-        public DataTable View_DG(string table)
-        {
-  
-            query = "select * from " + table;
-            DataTable dt = DBcontrol.Instance.getRecord(query);
-            return dt;
-     
-           
-        }
-
-
-
 
 
     }
+
+
+
+
+
+
 }
+
