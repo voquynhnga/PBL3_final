@@ -41,6 +41,12 @@ namespace PBL3
             txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
 
+            // BackColor trong suốt
+            labelControl1.ForeColor = System.Drawing.Color.Red;
+            labelControl1.Parent = pictureBox2;
+            labelControl1.BackColor = System.Drawing.Color.Transparent;
+            //labelControl1.Hide();
+
             // ctrl = new Controller(this);
 
         }
@@ -82,18 +88,27 @@ namespace PBL3
             }
             if (check == 1)
             {
-                MessageBox.Show("Vui lòng nhập mật khẩu có độ dài 8 kí tự và chỉ chứa số!");
+                labelControl1.Text = "Vui lòng nhập mật khẩu có độ dài 8 kí tự và chỉ chứa số!";
+                labelControl1.ForeColor = System.Drawing.Color.Red;
+                labelControl1.Show();
+                txtPass.Focus();
                 txtPass.Text = "";
             }
             if (check == 2)
             {
-                MessageBox.Show("Mật khẩu không đúng!");
+                labelControl1.Text = "Mật khẩu không đúng!";
+                labelControl1.ForeColor = System.Drawing.Color.Red;
+                labelControl1.Show();
+                txtPass.Focus();
                 txtPass.Text = "";
             }
             if (check == 3)
             {
-                MessageBox.Show("Tên người dùng không tồn tại!");
+                labelControl1.Text = "Tên người dùng không tồn tại!";
+                labelControl1.ForeColor = System.Drawing.Color.Red;
+                labelControl1.Show();
                 txtuser.Text = "";
+                txtuser.Focus();
                 txtPass.Text = "";
             }
 
@@ -129,10 +144,12 @@ namespace PBL3
             if (showPassword)
             {
                 txtPass.PasswordChar = '\0';
+                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye_flaticon.png");
             }
             else
             {
                 txtPass.PasswordChar = '*';
+                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye.png");
             }
         }
 
@@ -144,6 +161,31 @@ namespace PBL3
         private void pic1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Loginform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_Click(object sender, EventArgs e)
+        {
+            if (txtuser.Text == "Tên người dùng")
+            {
+                txtuser.Text = "";
+            }
+        }
+
+        private void txtPass_Click(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Mật khẩu")
+            {
+                txtPass.Text = "";
+            }
+            if (txtuser.Text == "Tên người dùng")
+            {
+                txtuser.Text = "";
+            }
         }
     }
 }

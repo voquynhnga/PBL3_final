@@ -132,7 +132,7 @@
             // 
             // chiTietSanPhamBindingSource
             // 
-            this.chiTietSanPhamBindingSource.DataSource = typeof(PBL3.DAL.ChiTietSanPham);
+           // this.chiTietSanPhamBindingSource.DataSource = typeof(PBL3.DAL.ChiTietSanPham);
             // 
             // colID_CTSP
             // 
