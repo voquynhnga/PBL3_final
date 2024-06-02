@@ -134,13 +134,11 @@ namespace PBL3.GUI_CCH
         }
 
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+  
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             pk1 = true;
-        }
-
-        private void chartControl1_Click(object sender, EventArgs e)
-        {
 
         }
     }

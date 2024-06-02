@@ -56,6 +56,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel_Body.SuspendLayout();
@@ -239,6 +239,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Không";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -250,6 +251,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Có";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label11
             // 
@@ -325,6 +327,22 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(211, 183);
             this.panel7.TabIndex = 6;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(90, 52);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(100, 22);
+            this.textBox11.TabIndex = 9;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(90, 14);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(100, 22);
+            this.textBox10.TabIndex = 8;
             // 
             // textBox4
             // 
@@ -421,22 +439,6 @@
             0,
             0,
             0});
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(90, 14);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 8;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(90, 52);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 9;
             // 
             // Order
             // 

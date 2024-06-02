@@ -22,6 +22,7 @@ namespace PBL3.GUI_NV
     public partial class FinalBill : Form
     {
         Main_NV mf = Application.OpenForms["Main_NV"] as Main_NV;
+        Order o = Order.Instance;
         // Bill1 b1 = Bill1.Instance_bill;
         //QLCH_3Entities DB = new QLCH_3Entities();
         //private readonly UnitOfWork _unitOfWork;
@@ -60,8 +61,8 @@ namespace PBL3.GUI_NV
 
             }
             int lastID = db.DonHangs.OrderByDescending(x => x.ID_HoaDon).FirstOrDefault()?.ID_HoaDon ?? 1;
-            textBox4.Text = lastID.ToString();
-            textBox1.Text = Bill1.Instance_bill.textBox7.Text;
+            textBox4.Text = (lastID +1).ToString();
+            textBox1.Text = o.textBox9.Text;
 
 
 
@@ -71,19 +72,15 @@ namespace PBL3.GUI_NV
         {
 
 
-            var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == Bill1.Instance_bill.textBox2.Text);
-            int nvID; // Biến để lưu ID_NV hợp lệ
+            var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == o.textBox8.Text);
+            int nvID = 0; 
             int user_ID = Controller.Instance.Get_ID(Controller.user.TaiKhoan1);
             if (Controller.user != null)
             {
                 var nv = db.NhanViens.FirstOrDefault(n => n.ID_NV == user_ID);
                 nvID = nv.ID_NV;
             }
-            else
-            {
-                // Xử lý khi Controller.user không tồn tại
-                nvID = 100; // Có thể là 0 hoặc giá trị mặc định khác
-            }
+
             DonHang dh = new DonHang()
             {
                 ID_HoaDon = Convert.ToInt32(textBox4.Text),
@@ -113,8 +110,8 @@ namespace PBL3.GUI_NV
 
                     string[] btnInfo = btn.Text.Split(',');
                     string btnName = btnInfo[0].Trim();
-                    var pr = db.SanPhams.FirstOrDefault(p => p.product_name == btnName);
-                    var pr_d = db.ChiTietSanPhams.FirstOrDefault(p => p.ID_CTSP == pr.product_id);
+                    //var pr = db.SanPhams.FirstOrDefault(p => p.product_name == btnName);
+                    var pr_d = db.ChiTietSanPhams.FirstOrDefault(p => p.SanPham.product_name == btnName);
 
                     ChiTietDonHang i = new ChiTietDonHang
                     {
@@ -165,7 +162,7 @@ namespace PBL3.GUI_NV
             ///FIXING
             CompleteBill();
             this.Close();
-            Bill1.Instance_bill.Close();
+            o.Close();
             Order.Instance.Close();
             mf.Show();
         }

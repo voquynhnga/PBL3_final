@@ -40,25 +40,13 @@ namespace PBL3.GUI_NV
             if (m.product != null)
             {
                 textBox4.Text = m.product.SoLuong.ToString();
-                var p = db.SanPhams.FirstOrDefault(s => s.product_id == m.product.product_id);
-                textBox2.Text = p.product_name;
+                //var p = db.SanPhams.FirstOrDefault(s => s.product_id == m.product.product_id);
+                textBox2.Text = m.product.SanPham.product_name;
                 textBox1.Text = m.product.Gia.ToString();
+                textBox10.Text = m.product.Size.size_value.ToString();
+                textBox11.Text = m.product.Color.color_name.ToString();
             }
 
-
-            //if (m.product.Hinh_anh != null && m.product.Hinh_anh.Length > 0)
-
-            //{
-
-            //    using (MemoryStream ms = new MemoryStream(m.product.Hinh_anh))
-
-            //    {
-
-            //        pictureBox2.Image = Image.FromStream(ms);
-
-            //    }
-
-            //}
         }
 
 
@@ -78,13 +66,27 @@ namespace PBL3.GUI_NV
                     float btnPrice = float.Parse(btnInfo[4].Trim());
                     int btnSL = int.Parse(btnInfo[3].Trim());
                     if ((pi.Name == btnName) && (pi.Size == btnSize))
+
                     {
+
                         if (pi.Color == btnColor)
+
                         {
+
                             btnSL += pi.SL;
+
                             btn.Text = $"{btnName}, {btnSize}, {btnColor}, {btnSL}, {btnPrice}";
+
+                            btn.Font = new Font("Arial", 10, FontStyle.Bold);
+
+                            btn.ForeColor = System.Drawing.Color.White;
+
+                            btn.BackColor = System.Drawing.Color.Blue;
+
                             isProductExist = true;
+
                             break;
+
                         }
                     }
                 }
@@ -94,11 +96,38 @@ namespace PBL3.GUI_NV
                 Button btn = new Button()
                 {
                     Width = Item.Width,
+
                     Height = Item.Height,
-                    Text = pi.Name + ", " + pi.Size + ", " + pi.Color + ", " + pi.SL + ", " + pi.Price
+
+                    Text = FormatButtonText(pi.Name, pi.Size, pi.Color, pi.SL, pi.Price),
+
+                    Font = new Font("Arial", 10, FontStyle.Bold),
+
+                    ForeColor = System.Drawing.Color.White,
+
+                    BackColor = System.Drawing.Color.Green,
+
+                    TextAlign = ContentAlignment.MiddleCenter
                 };
                 fl.Controls.Add(btn);
             }
+        }
+
+        private (string Name, string Size, string Color, int Quantity, float Price) ParseButtonText(string text)
+        {
+            string[] btnInfo = text.Split(',');
+            return (
+                Name: btnInfo[0].Trim(),
+                Size: btnInfo[1].Trim(),
+                Color: btnInfo[2].Trim(),
+                Quantity: int.Parse(btnInfo[3].Trim()),
+                Price: float.Parse(btnInfo[4].Trim())
+            );
+        }
+
+        private string FormatButtonText(string name, string size, string color, int quantity, double price)
+        {
+            return $"{name}, {size}, {color}, {quantity}, {price:F2}";
         }
 
 
@@ -132,7 +161,7 @@ namespace PBL3.GUI_NV
         //public List<Item> Get_listItem()
         //{
         //    List<Item> list = new List<Item>();
-            
+
         //      foreach (Control control in fl.Controls)
         //    {
         //        if(control is Button btn)
@@ -140,9 +169,9 @@ namespace PBL3.GUI_NV
 
         //        }
         //    }
-            
+
         //}
-    
+
 
 
 
@@ -196,15 +225,15 @@ namespace PBL3.GUI_NV
             //}
             //else
             //{
-                if (fl.Controls.Count == 0)
-                {
-                    MessageBox.Show("Vui lòng thêm sản phẩm vào giỏ hàng");
-                }
-                else
-                {
-                    mf.OpenChildForm(new FinalBill());
-                }
-           // }
+            if (fl.Controls.Count == 0)
+            {
+                MessageBox.Show("Vui lòng thêm sản phẩm vào giỏ hàng");
+            }
+            else
+            {
+                mf.OpenChildForm(new FinalBill());
+            }
+            // }
         }
 
         private void bAdd_Click_1(object sender, EventArgs e)
@@ -231,34 +260,36 @@ namespace PBL3.GUI_NV
             }
             textBox10.Text = "";
             textBox11.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox8.Text = "";
+            textBox7.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
             pictureBox2.Image = null;
             numericUpDown1.Value = 1;
 
         }
 
 
-        private void pictureBox2_Click_1(object sender, EventArgs e)
+        public void pictureBox2_Click_1(object sender, EventArgs e)
         {
             KhachHang cus = new KhachHang();
-            if (textBox1 != null)
+            if (textBox5 != null)
             {
-                cus = Controller.Instance.GetKH_SearchBill(textBox1.Text);
+                cus = Controller.Instance.GetKH_SearchBill(textBox5.Text);
                 if (cus != null)
                 {
-                    textBox2.Text = cus.NameKH.ToString();
-                    textBox3.Text = cus.GT.ToString();
-                    textBox4.Text = cus.DTL.ToString();
+                    textBox8.Text = cus.NameKH.ToString();
+                    textBox7.Text = cus.GT.ToString();
+                    textBox6.Text = "-" + cus.DTL.ToString();
                 }
                 else
                 {
                     XtraMessageBox.Show("Khách hàng mới, chưa được lưu");
                     Customer c = new Customer();
-                    c.txt_sdt.Text = textBox1.Text;
-                   
+                    c.txt_sdt.Text = textBox5.Text;
+
                     mf.OpenChildForm(c);
                 }
 
@@ -273,10 +304,30 @@ namespace PBL3.GUI_NV
             //}
             //else
             //{
-                Item pi = get_Item();
-                LoadProduct(pi);
-                Total_price();
+            Item pi = get_Item();
+            LoadProduct(pi);
+            Total_price();
             //}
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                radioButton2.Checked = false;
+                //textBox6.Text = "- " + textBox4.Text;
+                textBox9.Text = (Convert.ToDouble(Order.Instance.textBox3.Text) - (Convert.ToDouble(textBox6.Text) * 100)).ToString();
+
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                radioButton1.Checked = false;
+                textBox9.Text = textBox3.Text;
+            }
         }
     }
 }

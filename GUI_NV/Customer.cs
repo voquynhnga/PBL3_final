@@ -17,8 +17,9 @@ namespace PBL3.GUI_NV
 {
     public partial class Customer : Form
     {
-        Bill1 bill1 = Application.OpenForms["Bill1"] as Bill1;
+        Order o = Application.OpenForms["Order"] as Order;
         QLCH_3Entities DB = new QLCH_3Entities ();
+        Main_NV main_NV = new Main_NV ();
 
         public Customer()
         {
@@ -230,6 +231,15 @@ namespace PBL3.GUI_NV
             txt_sdt.EditValue = null;
             comboBoxEdit1.EditValue = null;
             txt_d.EditValue = null;
+
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            main_NV.OpenChildForm(o);
+            o.pictureBox2_Click_1(sender, e);
+
 
         }
     }
