@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using PBL3_qnv.GUI;
 using PBL3;
 using PBL3.GUI_NV;
+using PBL3.GUI_CCH;
 
 namespace PBL3_qnv
 {
@@ -19,7 +20,7 @@ namespace PBL3_qnv
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loginform());
+            Application.Run(new ChangePass_1());
         }
     }
 }

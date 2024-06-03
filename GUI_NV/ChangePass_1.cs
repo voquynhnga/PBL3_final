@@ -16,7 +16,7 @@ namespace PBL3.GUI_NV
     public partial class ChangePass_1 : Form
     {
         private Loginform lg;
-        private TaiKhoan currentUser = Controller.user;
+        //private TaiKhoan currentUser = Controller.user;
         private bool showPassword = false;
 
         public ChangePass_1()
@@ -25,52 +25,74 @@ namespace PBL3.GUI_NV
             textBox1.KeyPress += new KeyPressEventHandler(ChangePass_KeyPress);
             textBox2.KeyPress += new KeyPressEventHandler(ChangePass_KeyPress);
             textBox3.KeyPress += new KeyPressEventHandler(ChangePass_KeyPress);
+
+            //Chữ thông báo ở dưới mật khẩu
+            labelControl1.Hide();
+            labelControl1.Parent = pictureEdit1;
+            labelControl1.BackColor = System.Drawing.Color.Transparent;
+            labelControl1.ForeColor = System.Drawing.Color.Red;
+
+            labelControl2.Parent = pictureEdit1;
+            labelControl2.BackColor = System.Drawing.Color.Transparent;
+            
+            label1.Parent = pictureEdit1;
+            label1.BackColor = System.Drawing.Color.Transparent;
+
+            label2.Parent = pictureEdit1;
+            label2.BackColor = System.Drawing.Color.Transparent;
+
+            label3.Parent = pictureEdit1;
+            label3.BackColor = System.Drawing.Color.Transparent;
+
+            /*circularPictureBox1.Parent = pictureEdit1;
+            circularPictureBox1.BackColor = System.Drawing.Color.Transparent;*/
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaiKhoan t = new TaiKhoan()
-            {
-                TaiKhoan1 = currentUser.TaiKhoan1,
-                MatKhau = textBox3.Text
-            };
-            int check = Controller.Instance.Check_user(currentUser);
-            int check1 = Controller.Instance.Check_user(t);
+            //TaiKhoan t = new TaiKhoan()
+            //{
+            //    TaiKhoan1 = currentUser.TaiKhoan1,
+            //    MatKhau = textBox3.Text
+            //};
+            //int check = Controller.Instance.Check_user(currentUser);
+            //int check1 = Controller.Instance.Check_user(t);
 
-            if (textBox3.Text == textBox2.Text && check == 0)
-            {
-                MessageBox.Show("Đổi mật khẩu thành công!");
-                Controller.Instance.SavePass(t);
-            }
-            else if (check == 2)
-            {
-                MessageBox.Show("Mật khẩu cũ không chính xác!");
-                textBox1.Text = "";
+            //if (textBox3.Text == textBox2.Text && check == 0)
+            //{
+            //    MessageBox.Show("Đổi mật khẩu thành công!");
+            //    Controller.Instance.SavePass(t);
+            //}
+            //else if (check == 2)
+            //{
+                  labelControl1.Show();
+                  labelControl1.Text = "Mật khẩu cũ không chính xác!";
+            //    textBox1.Text = "";
 
-            }
-            else if (check1 == 1)
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu mới có độ dài 8 kí tự và chỉ chứa số!");
-                textBox2.Text = "";
-                textBox3.Text = "";
+            //}
+            //else if (check1 == 1)
+            //{
+                  labelControl1.Show();
+                  labelControl1.Text = "Vui lòng nhập mật khẩu mới có độ dài 8 kí tự và chỉ chứa số!";
+            //    textBox2.Text = "";
+            //    textBox3.Text = "";
 
-            }
-            else if (textBox3.Text != textBox2.Text)
-            {
-                MessageBox.Show("Nhập lại mật khẩu mới!");
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-            }
-
-
-
-            else
-            {
-                MessageBox.Show("Đổi mật khẩu thất bại!");
-                textBox2.Text = "";
-                textBox3.Text = "";
-            }
+            //}
+            //else if (textBox3.Text != textBox2.Text)
+            //{
+                  labelControl1.Show();
+                  labelControl1.Text = "Mật khẩu mới không trùng nhau!!!";
+            //    textBox1.Text = "";
+            //    textBox2.Text = "";
+            //    textBox3.Text = "";
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Đổi mật khẩu thất bại!");
+            //    textBox2.Text = "";
+            //    textBox3.Text = "";
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,35 +147,55 @@ namespace PBL3.GUI_NV
                 e.Handled = true;
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void ChangePass_1_Load(object sender, EventArgs e)
         {
-            showPassword = !showPassword;
-
-            if (showPassword)
-            {
-                textBox1.PasswordChar = '\0';
-            }
-            else
-            {
-                textBox1.PasswordChar = '*';
-            }
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+                showPassword = !showPassword;
+
+                if (showPassword)
+                {
+                    textBox1.PasswordChar = '\0';
+                    pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye_flaticon.png");
+                }
+                else
+                {
+                    textBox1.PasswordChar = '*';
+                    pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Image\\eye.png");
+                }
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             showPassword = !showPassword;
-
             if (showPassword)
             {
-                textBox1.PasswordChar = '\0';
+                textBox2.PasswordChar = '\0';
+                pictureBox2.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye_flaticon.png");
             }
             else
             {
-                textBox1.PasswordChar = '*';
+                textBox2.PasswordChar = '*';
+                pictureBox2.Image = new Bitmap(Application.StartupPath + "\\Image\\eye.png");
             }
+        }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+            if (showPassword)
+            {
+                textBox3.PasswordChar = '\0';
+                pictureBox3.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye_flaticon.png");
+            }
+            else
+            {
+                textBox3.PasswordChar = '*';
+                pictureBox3.Image = new Bitmap(Application.StartupPath + "\\Image\\eye.png");
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,8 +24,27 @@ namespace PBL3.GUI_CCH
         private void fDoanhThu_Load(object sender, EventArgs e)
         {
 
+
+            label1.Parent = panelControl1;
+            label1.BackColor = System.Drawing.Color.Transparent;
+
+            label2.Parent = panelControl1;
+            label2.BackColor = System.Drawing.Color.Transparent;
+
+            /*groupBox1.Parent = panelControl1;
+            groupBox1.BackColor = System.Drawing.Color.FromArgb(86,89,100);
+
+            groupBox2.Parent = panelControl1;
+            groupBox2.BackColor = System.Drawing.Color.Transparent;
+
+            groupBox3.Parent = panelControl1;
+            groupBox3.BackColor = System.Drawing.Color.Transparent;
+
+            groupBox4.Parent = panelControl1;
+            groupBox4.BackColor = System.Drawing.Color.Transparent;*/
         }
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void rjButton1_Click(object sender, EventArgs e)
         {
             DateTime d1 = dateTimePicker1.Value;
             DateTime d2 = dateTimePicker2.Value;
@@ -134,11 +154,23 @@ namespace PBL3.GUI_CCH
         }
 
 
-  
-
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             pk1 = true;
+        }
+
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

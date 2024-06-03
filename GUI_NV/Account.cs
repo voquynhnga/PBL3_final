@@ -15,7 +15,7 @@ namespace PBL3_qnv.GUI
     public partial class Account : Form
     {
         QLCH_3Entities pbl = new QLCH_3Entities ();
-        TaiKhoan currentUser = Controller.user;
+        //TaiKhoan currentUser = Controller.user;
 
 
 
@@ -30,6 +30,23 @@ namespace PBL3_qnv.GUI
             textBox5.KeyPress += new KeyPressEventHandler(Account_KeyPress);
             textBox6.KeyPress += new KeyPressEventHandler(Account_KeyPress);
 
+            label2.Parent = panelControl1;
+            label2.BackColor = System.Drawing.Color.Transparent;
+
+            label5.Parent = panelControl1;
+            label5.BackColor = System.Drawing.Color.Transparent;
+
+            label9.Parent = panelControl1;
+            label9.BackColor = System.Drawing.Color.Transparent;
+
+            label6.Parent = panelControl1;
+            label6.BackColor = System.Drawing.Color.Transparent;
+
+            label8.Parent = panelControl1;
+            label8.BackColor = System.Drawing.Color.Transparent;
+
+            textBox1.Parent = panelControl1;
+            textBox1.BackColor = System.Drawing.Color.Red;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,14 +92,14 @@ namespace PBL3_qnv.GUI
         void Load_Information()
         {
 
-            NhanVien nv = Controller.Instance.Get_NV(currentUser);
+            /*NhanVien nv = Controller.Instance.Get_NV(currentUser);
             textBox1.Text = nv.NameNV.ToString();
             textBox2.Text = nv.SDT.ToString();
             textBox3.Text = nv.Email.ToString();
             textBox4.Text = nv.GT.ToString();
             dateTimePicker1.Value = nv.NS;
             textBox5.Text = nv.CCCD.ToString();
-            textBox6.Text = currentUser.Loai_TK.ToString();
+            textBox6.Text = currentUser.Loai_TK.ToString();*/
 
         }
 
@@ -105,6 +122,21 @@ namespace PBL3_qnv.GUI
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Account_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
         }
