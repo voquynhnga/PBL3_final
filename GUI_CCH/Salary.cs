@@ -40,7 +40,7 @@ namespace PBL3.GUI_CCH
 
             }
 
-            if (cbb_Ap.EditValue == null)
+            else if (cbb_Ap.EditValue == null)
 
             {
 
@@ -52,7 +52,7 @@ namespace PBL3.GUI_CCH
 
             }
 
-            if (dateEdit1.EditValue == null)
+            else if (dateEdit1.EditValue == null)
 
             {
 
@@ -64,7 +64,7 @@ namespace PBL3.GUI_CCH
 
             }
 
-            if (allConditionsMet)
+            else if(allConditionsMet)
 
             {
 
@@ -138,9 +138,7 @@ namespace PBL3.GUI_CCH
 
         private void Salary_Load(object sender, EventArgs e)
         {
-            //FIXINGGGGGG
 
-            //lichLamBindingSource.DataSource = db.LichLams.ToList();
             nhanVienBindingSource.DataSource = db.NhanViens.ToList();
             var data = db.LichLams.GroupBy(x => new { x.NgayLam.Month, x.NgayLam.Year })
                                   .Select(grp => new
@@ -155,7 +153,7 @@ namespace PBL3.GUI_CCH
 
             cbb_Ap.EditValue = null;
             dateEdit1.EditValue = null;
-            txt_Thuong.Text = "";
+            txt_Thuong.EditValue = null;
 
 
 
