@@ -293,7 +293,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(295, 24);
             this.dateTimePicker2.TabIndex = 2;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 5, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2024, 6, 30, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -319,7 +319,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(295, 24);
             this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2024, 5, 1, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // chartControl1
@@ -330,6 +330,7 @@
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl1.Size = new System.Drawing.Size(300, 200);
             this.chartControl1.TabIndex = 13;
+            this.chartControl1.Click += new System.EventHandler(this.chartControl1_Click);
             // 
             // fDoanhThu
             // 

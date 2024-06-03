@@ -238,13 +238,13 @@ namespace PBL3.GUI_CCH
             }
             foreach (ProductTypeReport i in bll.GetProductTypeReports(d2, d2))
             {
-                if (i.TenLoaiHang == "Sneaker")
+                if (i.TenLoaiHang == "Giày")
                 { a[0, 0] += i.TongTien; a[0, 1] = (a[0, 1] + i.TongTien) / (b[0]); }
-                if (i.TenLoaiHang == "Phụ kiện")
+                if (i.TenLoaiHang == "Dép")
                 { a[1, 0] += i.TongTien; a[1, 1] = (a[1, 1] + i.TongTien) / (b[1]); }
                 if (i.TenLoaiHang == "Sandal")
                 { a[2, 0] += i.TongTien; a[2, 1] = (a[2, 1] + i.TongTien) / (b[2]); }
-                if (i.TenLoaiHang == "Tất")
+                if (i.TenLoaiHang == "Vớ")
                 { a[3, 0] += i.TongTien; a[3, 1] = (a[3, 1] + i.TongTien) / (b[3]); }
             }
             SneakerDT.Text = a[0, 0].ToString();
@@ -266,10 +266,15 @@ namespace PBL3.GUI_CCH
             chartControl1.Series.Add("Doanh thu theo nhóm hàng", DevExpress.XtraCharts.ViewType.Pie);
             chartControl1.Series["Doanh thu theo nhóm hàng"].Label.TextPattern = "{A} : {VP:p0} ";
 
+            chartControl1.Series.Add("DT",DevExpress.XtraCharts.ViewType.Pie);
+            chartControl1.Series["DT"].Label.TextPattern = "{A} : {VP:p0} ";
+
             foreach (string i in bll.GetAllLH())
             {
-               //chartDT.Series["DoanhThu"].Points.AddXY(i, a[j, 0]);
-                chartControl1.Series["Doanh thu theo nhóm hàng"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(i, a[j, 0]));
+                
+                //chartDT.Series["DoanhThu"].Points.AddXY(i, a[j, 0]);
+                chartControl1.Series["DT"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(i, a[j, 0]));
+                MessageBox.Show(i);
 
                 j++;
             }
@@ -286,6 +291,11 @@ namespace PBL3.GUI_CCH
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             pk1 = true;
+        }
+
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

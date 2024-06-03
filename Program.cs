@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using PBL3_qnv.GUI;
 using PBL3;
 using PBL3.GUI_NV;
+using PBL3.GUI_CCH;
 
 namespace PBL3_qnv
 {
