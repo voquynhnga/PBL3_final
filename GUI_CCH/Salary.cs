@@ -26,79 +26,114 @@ namespace PBL3.GUI_CCH
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            //for (int i = 0; i < gridView1.RowCount; i++)
-            //{
+            bool allConditionsMet = true;
 
-            //    var nhanVienValue = gridView1.GetRowCellValue(i, colNhanVien).ToString();
-            //    var thuongValue = txt_Thuong.EditValue;
-
-
-            //    if (!string.IsNullOrEmpty(nhanVienValue) && nhanVienValue == cbb_Ap.Text)
-            //    {
-            //        db.Database.ExecuteSqlCommand("UPDATE LichLam SET Thuong = @Thuong", new SqlParameter("@Thuong", thuongValue));
-
-            //    }
-            //}
-            //Salary_Load(sender, e);
-
-            int currentMonth = DateTime.Now.Month;
-
-
-
-            for (int i = 0; i < gridView1.RowCount; i++)
+            if (txt_Thuong.EditValue == null)
 
             {
 
-                // Lấy tháng của dữ liệu trong gridControl1
+                label1.Text = "Vui lòng nhập tiền thưởng!";
 
-                int dataMonth = Convert.ToInt32(gridView1.GetRowCellValue(i, "NgayLam").ToString().Split('/')[0]);
+                txt_Thuong.Focus();
 
-
-
-                if (dataMonth == currentMonth)
-
-                {
-
-                    var nhanVienValue = gridView1.GetRowCellValue(i, "NhanVien").ToString();
-
-                    var thuongValue = txt_Thuong.EditValue;
-
-                    if (!string.IsNullOrEmpty(nhanVienValue) && nhanVienValue == cbb_Ap.Text)
-
-                    {
-
-                        // Cập nhật dữ liệu vào cột "Thuong" cho hàng tương ứng
-
-                        gridView1.SetRowCellValue(i, "Thuong", thuongValue);
-
-
-                        int idNV = Convert.ToInt32(gridView1.GetRowCellValue(i, "ID_NV"));
-
-                        var lichLam = db.LichLams.FirstOrDefault(x => x.ID_NV == idNV && x.NgayLam.Month == currentMonth);
-
-                        if (lichLam != null)
-
-                        {
-
-                            db.Database.ExecuteSqlCommand("UPDATE LichLam SET Thuong = @Thuong Where ID_NV = @ID_NV",
-
-                                new SqlParameter("@Thuong", thuongValue),
-
-                                new SqlParameter("@ID_NV", idNV));
-
-                            db.SaveChanges();
-
-                        }
-
-                    }
-
-                }
+                allConditionsMet = false;
 
             }
 
-            Salary_Load(sender, e);
+            if (cbb_Ap.EditValue == null)
+
+            {
+
+                label1.Text = "Vui lòng chọn nhân viên!";
+
+                cbb_Ap.Focus();
+
+                allConditionsMet = false;
+
+            }
+
+            if (dateEdit1.EditValue == null)
+
+            {
+
+                label1.Text = "Vui lòng chọn tháng!";
+
+                dateEdit1.Focus();
+
+                allConditionsMet = false;
+
+            }
+
+            if (allConditionsMet)
+
+            {
+
+                DateTime dateValue = (DateTime)dateEdit1.EditValue;
+                int currentMonth = dateValue.Month;
 
 
+
+
+
+
+                for (int i = 0; i < gridView1.RowCount; i++)
+
+                {
+
+
+                    int dataMonth = Convert.ToInt32(gridView1.GetRowCellValue(i, "NgayLam").ToString().Split('/')[0]);
+
+
+
+                    if (dataMonth == currentMonth)
+
+                    {
+
+                        var nhanVienValue = gridView1.GetRowCellValue(i, "NhanVien").ToString();
+
+                        var thuongValue = txt_Thuong.EditValue;
+
+                        if (!string.IsNullOrEmpty(nhanVienValue) && nhanVienValue == cbb_Ap.Text)
+
+                        {
+
+
+                            gridView1.SetRowCellValue(i, "Thuong", thuongValue);
+
+
+                            int idNV = Convert.ToInt32(gridView1.GetRowCellValue(i, "ID_NV"));
+
+                            var lichLam = db.LichLams.FirstOrDefault(x => x.ID_NV == idNV && x.NgayLam.Month == currentMonth);
+
+                            if (lichLam != null)
+
+                            {
+
+                                db.Database.ExecuteSqlCommand("UPDATE LichLam SET Thuong = @Thuong Where ID_NV = @ID_NV",
+
+                                    new SqlParameter("@Thuong", thuongValue),
+
+                                    new SqlParameter("@ID_NV", idNV));
+
+                                db.SaveChanges();
+
+                            }
+
+                        }
+                        else MessageBox.Show("Không có dữ liệu của nhân viên " + cbb_Ap.Text + " trong tháng " + currentMonth);
+                        cbb_Ap.Focus();
+
+                    }
+                    else MessageBox.Show("Không có dữ liệu tháng " + currentMonth + " trong bảng lương!");
+                    dateEdit1.Focus();
+
+                }
+;
+
+
+                Salary_Load(sender, e);
+
+            }
         }
 
         private void Salary_Load(object sender, EventArgs e)
@@ -118,15 +153,15 @@ namespace PBL3.GUI_CCH
                                   }).ToList();
             lichLamBindingSource.DataSource = data;
 
+            cbb_Ap.EditValue = null;
+            dateEdit1.EditValue = null;
+            txt_Thuong.Text = "";
 
 
 
-        }
-
-
-        private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
 
         }
+
+
     }
 }
