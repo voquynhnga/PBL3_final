@@ -121,8 +121,6 @@ namespace PBL3.GUI_CCH
 
                 {
 
-                    //existingLH.ID_NCC = lhEdit.ID_NCC;
-
                     existingSP.SoLuong = spEdit.SoLuong;
                     existingSP.Gia = spEdit.Gia;
                     existingSP.Gia_nhap = spEdit.Gia_nhap;
