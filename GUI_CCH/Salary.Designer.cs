@@ -33,6 +33,7 @@
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbb_Ap = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID_NV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,10 +55,9 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.colThang = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.colThang = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lichLamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Ap.Properties)).BeginInit();
@@ -124,6 +124,15 @@
             this.layoutControl1.Size = new System.Drawing.Size(1230, 749);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // label1
+            // 
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(100, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(591, 27);
+            this.label1.TabIndex = 17;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gridControl1
             // 
@@ -343,23 +352,6 @@
             this.emptySpaceItem4.Size = new System.Drawing.Size(527, 26);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // colThang
-            // 
-            this.colThang.Caption = "Tháng";
-            this.colThang.FieldName = "GetMonth(NgayLam)";
-            this.colThang.MinWidth = 25;
-            this.colThang.Name = "colThang";
-            this.colThang.Visible = true;
-            this.colThang.VisibleIndex = 2;
-            this.colThang.Width = 94;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(100, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(591, 27);
-            this.label1.TabIndex = 17;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.label1;
@@ -376,6 +368,16 @@
             this.emptySpaceItem5.Name = "emptySpaceItem5";
             this.emptySpaceItem5.Size = new System.Drawing.Size(88, 31);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // colThang
+            // 
+            this.colThang.Caption = "Tháng";
+            this.colThang.FieldName = "GetMonth(NgayLam)";
+            this.colThang.MinWidth = 25;
+            this.colThang.Name = "colThang";
+            this.colThang.Visible = true;
+            this.colThang.VisibleIndex = 2;
+            this.colThang.Width = 94;
             // 
             // Salary
             // 
