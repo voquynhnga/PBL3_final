@@ -39,7 +39,12 @@
     <Reference Include="DevExpress.Data.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -48,9 +53,12 @@
     <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -150,6 +158,9 @@
     <Compile Include="DTO_bs\ProductTypeReport.cs" />
     <Compile Include="DTO_bs\SalesReportItem.cs" />
     <Compile Include="DTO_bs\Item.cs" />
+    <Compile Include="GUI_CCH\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI_CCH\fDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +197,9 @@
     <Compile Include="GUI_CCH\mnSupplier.Designer.cs">
       <DependentUpon>mnSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_CCH\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI_CCH\Salary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,18 +218,6 @@
     <Compile Include="GUI_CCH\TKNV.Designer.cs">
       <DependentUpon>TKNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\ReBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_NV\ReBox.Designer.cs">
-      <DependentUpon>ReBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_NV\Shift.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_NV\Shift.Designer.cs">
-      <DependentUpon>Shift.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI_NV\Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +230,33 @@
     <Compile Include="GUI_NV\ChangePass_1.Designer.cs">
       <DependentUpon>ChangePass_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_NV\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\CircularPictureEdit1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_NV\ReBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\ReBox.Designer.cs">
+      <DependentUpon>ReBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_NV\Shift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Shift.Designer.cs">
+      <DependentUpon>Shift.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_NV\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,12 +268,6 @@
     </Compile>
     <Compile Include="GUI_NV\FinalBill.Designer.cs">
       <DependentUpon>FinalBill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_NV\Loginform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_NV\Loginform.Designer.cs">
-      <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_NV\Main_NV.cs">
       <SubType>Form</SubType>
@@ -293,26 +316,26 @@
     <EmbeddedResource Include="GUI_CCH\TKNV.resx">
       <DependentUpon>TKNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\ReBox.resx">
-      <DependentUpon>ReBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Shift.resx">
-      <DependentUpon>Shift.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\ChangePass_1.resx">
       <DependentUpon>ChangePass_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NV\Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NV\ReBox.resx">
+      <DependentUpon>ReBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NV\Shift.resx">
+      <DependentUpon>Shift.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\FinalBill.resx">
       <DependentUpon>FinalBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Loginform.resx">
-      <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\Main_NV.resx">
       <DependentUpon>Main_NV.cs</DependentUpon>
@@ -380,6 +403,21 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bear.png" />
+    <None Include="Resources\background-2.jpg" />
+    <None Include="Resources\BackGround_Account.jpg" />
+    <None Include="Resources\anhnen.png" />
+    <None Include="Resources\wellcome.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\statistical.png" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\R %281%29.jpg" />
+    <None Include="Resources\OIP.jpg" />
+    <None Include="Resources\newBackground.png" />
+    <None Include="Resources\MauVang.png" />
+    <None Include="Resources\eye_flaticon.png" />
+    <None Include="Resources\eye.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

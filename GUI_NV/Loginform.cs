@@ -40,15 +40,14 @@ namespace PBL3
             //KeyPreview = true;
             txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
-
+            
             // BackColor trong suốt
             labelControl1.ForeColor = System.Drawing.Color.Red;
-            labelControl1.Parent = pictureBox2;
+            //labelControl1.Parent = pictureBox2;
             labelControl1.BackColor = System.Drawing.Color.Transparent;
             //labelControl1.Hide();
-
+            
             // ctrl = new Controller(this);
-
         }
 
 
@@ -57,14 +56,10 @@ namespace PBL3
             return currentuser;
         }
 
-
-
         private void bLogin_Click_1(object sender, EventArgs e)
         {
             Controller.Instance.SetUser(currentuser, txtuser.Text, txtPass.Text);
             TaiKhoan t = GetUser();
-
-
 
             int check = Controller.Instance.Check_user(t);
             int check_type = Controller.Instance.Check_type(t);
@@ -92,7 +87,7 @@ namespace PBL3
                 labelControl1.ForeColor = System.Drawing.Color.Red;
                 labelControl1.Show();
                 txtPass.Focus();
-                txtPass.Text = "";
+
             }
             if (check == 2)
             {
@@ -100,7 +95,6 @@ namespace PBL3
                 labelControl1.ForeColor = System.Drawing.Color.Red;
                 labelControl1.Show();
                 txtPass.Focus();
-                txtPass.Text = "";
             }
             if (check == 3)
             {
@@ -140,7 +134,7 @@ namespace PBL3
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             showPassword = !showPassword;
-
+            
             if (showPassword)
             {
                 txtPass.PasswordChar = '\0';
@@ -148,8 +142,8 @@ namespace PBL3
             }
             else
             {
+                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Image\\eye.png");
                 txtPass.PasswordChar = '*';
-                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye.png");
             }
         }
 
@@ -168,12 +162,22 @@ namespace PBL3
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void txtuser_Click(object sender, EventArgs e)
         {
-            if (txtuser.Text == "Tên người dùng")
+            if(txtuser.Text == "Tên người dùng")
             {
                 txtuser.Text = "";
-            }
+            }    
         }
 
         private void txtPass_Click(object sender, EventArgs e)
@@ -186,6 +190,16 @@ namespace PBL3
             {
                 txtuser.Text = "";
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
