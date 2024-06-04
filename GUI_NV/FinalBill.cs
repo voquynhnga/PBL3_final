@@ -34,6 +34,24 @@ namespace PBL3.GUI_NV
             Load_FinalBill();
         }
 
+        private void FinalBill_Load(object sender, EventArgs e)
+        {
+            label3.Parent = customPanel1;
+            label3.BackColor = System.Drawing.Color.Transparent;
+
+            label4.Parent = customPanel1;
+            label4.BackColor = System.Drawing.Color.Transparent;
+
+            label5.Parent = customPanel1;
+            label5.BackColor = System.Drawing.Color.Transparent;
+
+            label6.Parent = customPanel1;
+            label6.BackColor = System.Drawing.Color.Transparent;
+
+            radioButton1.Parent = customPanel1;
+            radioButton1.BackColor = System.Drawing.Color.Transparent;
+        }
+
         private void Load_FinalBill()
         {
             // Order orderForm = Application.OpenForms["OrderForm"] as Order;
@@ -62,9 +80,6 @@ namespace PBL3.GUI_NV
             int lastID = db.DonHangs.OrderByDescending(x => x.ID_HoaDon).FirstOrDefault()?.ID_HoaDon ?? 1;
             textBox4.Text = lastID.ToString();
             textBox1.Text = Bill1.Instance_bill.textBox7.Text;
-
-
-
         }
 
         public DonHang Get_DonHang()
@@ -230,6 +245,21 @@ namespace PBL3.GUI_NV
             {
                 e.Handled = true;
             }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

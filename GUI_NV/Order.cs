@@ -289,6 +289,45 @@ namespace PBL3.GUI_NV
 
         private void Order_Load(object sender, EventArgs e)
         {
+            pictureBox2.Parent = panel_Body;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+
+
+            //CustomPanel1
+            label8.Parent = customPanel1;
+            label8.BackColor = System.Drawing.Color.Transparent;
+
+            label9.Parent = customPanel1;
+            label9.BackColor = System.Drawing.Color.Transparent;
+
+            label11.Parent = customPanel1;
+            label11.BackColor = System.Drawing.Color.Transparent;
+
+            radioButton1.Parent = customPanel1;
+            radioButton1.BackColor = System.Drawing.Color.Transparent;
+
+            radioButton2.Parent = customPanel1;
+            radioButton2.BackColor = System.Drawing.Color.Transparent;
+
+            //customPanel2
+            label4.Parent = customPanel2;
+            label4.BackColor = System.Drawing.Color.Transparent;
+
+            label10.Parent = customPanel2;
+            label10.BackColor = System.Drawing.Color.Transparent;
+
+            label5.Parent = customPanel2;
+            label5.BackColor = System.Drawing.Color.Transparent;
+
+        }
+
+        private void panel_Body_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -20,7 +20,7 @@ namespace PBL3_qnv
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fDoanhThu());
+            Application.Run(new Loginform());
         }
     }
 }

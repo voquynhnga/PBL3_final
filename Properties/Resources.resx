@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="eye_flaticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <!--<data name="eye_flaticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye_flaticon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  </data>-->
+  <!--<data name="R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\R.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  </data>-->
   <data name="R1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\R.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,9 +136,9 @@
   <data name="anhnen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Resources\anhnen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <!--<data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  </data>-->
   <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
