@@ -73,6 +73,8 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
         internal static System.Drawing.Bitmap background_2 {
             get {
                 object obj = ResourceManager.GetObject("background_2", resourceCulture);
@@ -93,6 +95,7 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         internal static System.Drawing.Bitmap bear {
             get {
                 object obj = ResourceManager.GetObject("bear", resourceCulture);
@@ -103,6 +106,19 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+        internal static System.Drawing.Bitmap Coffee_Plese {
+            get {
+                object obj = ResourceManager.GetObject("Coffee Plese", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         internal static System.Drawing.Bitmap eye {
             get {
                 object obj = ResourceManager.GetObject("eye", resourceCulture);
@@ -113,6 +129,11 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+        internal static System.Drawing.Bitmap R1 {
+            get {
+                object obj = ResourceManager.GetObject("R1", resourceCulture);
+=======
         internal static System.Drawing.Bitmap eye_flaticon {
             get {
                 object obj = ResourceManager.GetObject("eye_flaticon", resourceCulture);
@@ -176,6 +197,7 @@ namespace PBL3.Properties {
         internal static System.Drawing.Bitmap statistical {
             get {
                 object obj = ResourceManager.GetObject("statistical", resourceCulture);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +215,8 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
         internal static System.Drawing.Bitmap user1 {
             get {
                 object obj = ResourceManager.GetObject("user1", resourceCulture);
@@ -203,6 +227,7 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         internal static System.Drawing.Bitmap wellcome {
             get {
                 object obj = ResourceManager.GetObject("wellcome", resourceCulture);

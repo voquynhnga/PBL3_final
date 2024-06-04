@@ -39,12 +39,16 @@
     <Reference Include="DevExpress.Data.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+<<<<<<< HEAD
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+=======
     <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -53,6 +57,14 @@
     <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+<<<<<<< HEAD
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+=======
     <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -60,6 +72,7 @@
     <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -111,6 +124,8 @@
     <Compile Include="DAL\DonHang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="DAL\KhachHang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -153,6 +168,7 @@
     <Compile Include="DAL\TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Compile Include="DTO_bs\LoaiHangV.cs" />
     <Compile Include="DTO_bs\ProductInCM.cs" />
     <Compile Include="DTO_bs\ProductTypeReport.cs" />
@@ -164,7 +180,11 @@
     <Compile Include="GUI_CCH\fDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI_CCH\fDoanhThu.Designer.cs">
+=======
     <Compile Include="GUI_CCH\fDoanhThu.designer.cs">
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
       <DependentUpon>fDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_CCH\Main_2.cs">
@@ -206,6 +226,13 @@
     <Compile Include="GUI_CCH\Salary.Designer.cs">
       <DependentUpon>Salary.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI_CCH\Shift_CCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_CCH\Shift_CCH.Designer.cs">
+      <DependentUpon>Shift_CCH.cs</DependentUpon>
+=======
     <Compile Include="GUI_CCH\ShiftCCH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +256,7 @@
     </Compile>
     <Compile Include="GUI_NV\ChangePass_1.Designer.cs">
       <DependentUpon>ChangePass_1.cs</DependentUpon>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     </Compile>
     <Compile Include="GUI_NV\CircularButton.cs">
       <SubType>Component</SubType>
@@ -236,6 +264,11 @@
     <Compile Include="GUI_NV\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI_NV\CircularPictureEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+=======
     <Compile Include="GUI_NV\CircularPictureEdit1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -245,6 +278,7 @@
     <Compile Include="GUI_NV\Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Compile Include="GUI_NV\ReBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +291,27 @@
     <Compile Include="GUI_NV\Shift.Designer.cs">
       <DependentUpon>Shift.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI_NV\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_NV\Bill1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Bill1.Designer.cs">
+      <DependentUpon>Bill1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_NV\ChangePass_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\ChangePass_1.Designer.cs">
+      <DependentUpon>ChangePass_1.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Compile Include="GUI_NV\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +324,15 @@
     <Compile Include="GUI_NV\FinalBill.Designer.cs">
       <DependentUpon>FinalBill.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI_NV\Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NV\Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Compile Include="GUI_NV\Main_NV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,8 +351,55 @@
     <Compile Include="GUI_NV\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="DAL\KhachHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LichLam.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LoaiHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LoHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhaCungCap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhanVien.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL\SanPham.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Size.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TaiKhoan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+=======
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <EmbeddedResource Include="GUI_CCH\fDoanhThu.resx">
       <DependentUpon>fDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +421,10 @@
     <EmbeddedResource Include="GUI_CCH\Salary.resx">
       <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI_CCH\Shift_CCH.resx">
+      <DependentUpon>Shift_CCH.cs</DependentUpon>
+=======
     <EmbeddedResource Include="GUI_CCH\ShiftCCH.resx">
       <DependentUpon>ShiftCCH.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +439,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\ReBox.resx">
       <DependentUpon>ReBox.cs</DependentUpon>
@@ -331,12 +447,31 @@
     <EmbeddedResource Include="GUI_NV\Shift.resx">
       <DependentUpon>Shift.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI_NV\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NV\Bill1.resx">
+      <DependentUpon>Bill1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NV\ChangePass_1.resx">
+      <DependentUpon>ChangePass_1.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <EmbeddedResource Include="GUI_NV\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NV\FinalBill.resx">
       <DependentUpon>FinalBill.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI_NV\Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <EmbeddedResource Include="GUI_NV\Main_NV.resx">
       <DependentUpon>Main_NV.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +484,11 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+<<<<<<< HEAD
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+=======
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -357,6 +497,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <EntityDeploy Include="DAL\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -375,11 +516,22 @@
     <None Include="Properties\DataSources\PBL3.DAL.NhanVien.datasource" />
     <None Include="Properties\DataSources\PBL3.DAL.SanPham.datasource" />
     <None Include="Properties\DataSources\PBL3.DAL.Size.datasource" />
+<<<<<<< HEAD
+=======
     <None Include="Properties\DataSources\PBL3.DAL.TaiKhoan.datasource" />
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+<<<<<<< HEAD
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -393,6 +545,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="bin\Debug\Resources\bear.png" />
+    <None Include="bin\Debug\Resources\wellcome.png" />
+    <None Include="bin\Debug\Resources\anhnen.png" />
+    <None Include="bin\Debug\Resources\eye.png" />
+    <None Include="bin\Debug\Resources\user.png" />
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <Content Include="DAL\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -403,6 +563,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+<<<<<<< HEAD
+    <None Include="Resources\calendar.png" />
+    <Content Include="Resources\eye_flaticon.png" />
+    <None Include="Image\Coffee Plese.png" />
+    <None Include="Image\R.jpg" />
+    <None Include="Resources\R.jpg" />
+=======
     <None Include="Resources\bear.png" />
     <None Include="Resources\background-2.jpg" />
     <None Include="Resources\BackGround_Account.jpg" />
@@ -418,6 +585,7 @@
     <None Include="Resources\MauVang.png" />
     <None Include="Resources\eye_flaticon.png" />
     <None Include="Resources\eye.png" />
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

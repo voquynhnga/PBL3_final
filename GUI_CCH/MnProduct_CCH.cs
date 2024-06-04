@@ -86,7 +86,40 @@ namespace PBL3.GUI_CCH
 
         private void btn_Edit_Click_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            //int rowIndex = gridView1.GetSelectedRows()[0];
+            //ProductInCM selectedProduct = gridView1.GetRow(rowIndex) as ProductInCM;
+
+            //var tensp = txt_TenSP.Text;
+            //var loaihang = cb_LoaiHang.Text;
+            ////var ncc = txt_NCC.Text;
+            //var size = Convert.ToInt32(spin_Size.EditValue);
+            //var mau = txt_Mau.EditValue.ToString();
+            //var soluong = Convert.ToInt32(spin_SL.EditValue);
+
+            //foreach (ProductInCM i in products)
+            //{
+            //    if (i == selectedProduct)
+            //    {
+            //        i.Ten_SP = tensp;
+            //        i.Ten_LoaiHang = loaihang;
+            //       // i.Ten_NCC = ncc;
+            //        i.Size = size;
+            //        i.MauSac = mau;
+            //        i.SoLuong = soluong;
+            //    }
+            //}
+            //gridControl1.DataSource = null;
+            //gridControl1.DataSource = products;
+
+            //var gv = gridView1;
+
+            //if (gv.IsDataRow(gv.FocusedRowHandle))
+
+            //{
+=======
  
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             var gv = gridView1;
 
             if (gv.IsDataRow(gv.FocusedRowHandle))
@@ -103,10 +136,15 @@ namespace PBL3.GUI_CCH
                     ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
                     size_id = Convert.ToInt32(txt_Size.EditValue),
                     color_id = Convert.ToInt32(txt_Mau.EditValue),
+<<<<<<< HEAD
+                    Gia = Convert.ToDouble(txt_Price.EditValue),
+                    
+=======
                     Gia = Convert.ToDouble(txt_Priceout.EditValue),
                     Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue),
 
 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
                     SoLuong = Convert.ToInt32(txt_SL.EditValue),
 
@@ -121,9 +159,16 @@ namespace PBL3.GUI_CCH
 
                 {
 
+<<<<<<< HEAD
+                    //existingLH.ID_NCC = lhEdit.ID_NCC;
+
+                    existingSP.SoLuong = spEdit.SoLuong;
+                    existingSP.Gia = spEdit.Gia;
+=======
                     existingSP.SoLuong = spEdit.SoLuong;
                     existingSP.Gia = spEdit.Gia;
                     existingSP.Gia_nhap = spEdit.Gia_nhap;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
                     existingSP.ID_LoHang = spEdit.ID_LoHang;
                     existingSP.ID_LoaiHang = spEdit.ID_LoaiHang;
                     existingSP.color_id = spEdit.color_id;
@@ -170,12 +215,19 @@ namespace PBL3.GUI_CCH
                 color_id = Convert.ToInt32(txt_Mau.EditValue),
                 ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
                 SoLuong = Convert.ToInt32(txt_SL.EditValue),
+<<<<<<< HEAD
+                Gia = Convert.ToDouble(txt_Price.EditValue)
+
+                //product_id = Te
+       
+=======
                 Gia = Convert.ToDouble(txt_Priceout.EditValue),
                 Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue)
 
 
                 //product_id = Te
 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
                 //Luong = 0,
                 // TaiKhoan = "";
 
@@ -197,11 +249,17 @@ namespace PBL3.GUI_CCH
             txt_Size.EditValue = 0;
             txt_Mau.Text = "";
             txt_SL.EditValue = 0;
+<<<<<<< HEAD
+            txt_Price.EditValue = 0;
+            txt_IN.EditValue = 0;
+            txt_TenSP.Focus();
+=======
             txt_Pricein.EditValue = 0;
             txt_IN.EditValue = 0;
             txt_Priceout.EditValue = 0;
             txt_TenSP.Focus();
 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
  
@@ -267,11 +325,18 @@ namespace PBL3.GUI_CCH
                 txt_TenSP.EditValue = sp.product_id;
                 txt_SL.EditValue = sp.SoLuong;
                 txt_IN.EditValue = sp.ID_LoHang;
+<<<<<<< HEAD
+                txt_Price.EditValue = sp.Gia;
+                txt_Mau.EditValue = sp.color_id;
+                txt_LoaiHang.EditValue = sp.ID_LoaiHang;
+                txt_Size.EditValue = sp.size_id;
+=======
                 txt_Pricein.EditValue = sp.Gia_nhap;
                 txt_Mau.EditValue = sp.color_id;
                 txt_LoaiHang.EditValue = sp.ID_LoaiHang;
                 txt_Size.EditValue = sp.size_id;
                 txt_Priceout.EditValue = sp.Gia;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
 
             }
@@ -307,7 +372,10 @@ namespace PBL3.GUI_CCH
 
             }
         }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

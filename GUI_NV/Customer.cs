@@ -17,9 +17,14 @@ namespace PBL3.GUI_NV
 {
     public partial class Customer : Form
     {
+<<<<<<< HEAD
+        Bill1 bill1 = Application.OpenForms["Bill1"] as Bill1;
+        QLCH_3Entities DB = new QLCH_3Entities ();
+=======
         Order o = Application.OpenForms["Order"] as Order;
         QLCH_3Entities DB = new QLCH_3Entities ();
         Main_NV main_NV = new Main_NV ();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
         public Customer()
         {
@@ -67,7 +72,10 @@ namespace PBL3.GUI_NV
         private void Customer_Load(object sender, EventArgs e)
         {
             khachHangBindingSource.DataSource = DB.KhachHangs.ToList();
+<<<<<<< HEAD
+=======
             txt_sdt.Focus();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
         }
 
@@ -219,6 +227,8 @@ namespace PBL3.GUI_NV
 
             }
         }
+<<<<<<< HEAD
+=======
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
@@ -242,5 +252,6 @@ namespace PBL3.GUI_NV
 
 
         }
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

@@ -24,6 +24,10 @@ namespace PBL3
     {
         String query;
         private bool showPassword = false;
+<<<<<<< HEAD
+       // Mainform mf = new Mainform();
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
        Main_NV mf = new Main_NV();
        Main_2 mf2 = new Main_2();
         public TaiKhoan currentuser = new TaiKhoan
@@ -36,10 +40,24 @@ namespace PBL3
         public Loginform()
         {
             InitializeComponent();
+<<<<<<< HEAD
+            //KeyPreview = true;
+            txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
+            txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
+            
+            // BackColor trong suốt
+            labelControl1.ForeColor = System.Drawing.Color.Red;
+            //labelControl1.Parent = pictureBox2;
+            labelControl1.BackColor = System.Drawing.Color.Transparent;
+            labelControl1.Hide();
+            
+            // ctrl = new Controller(this);
+=======
             txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             Load += Loginform_Load;
  
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
 
@@ -70,6 +88,10 @@ namespace PBL3
                     this.Hide();
                     mf2.Show();
                 }
+<<<<<<< HEAD
+                //this.Hide();
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
             }
             if (check == 1)
@@ -140,10 +162,48 @@ namespace PBL3
 
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            txtPass.PasswordChar = '*';
+        }
+
+        private void pic1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Loginform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtuser_Click(object sender, EventArgs e)
+        {
+            if(txtuser.Text == "Tên người dùng")
+            {
+                txtuser.Text = "";
+            }    
+        }
+
+        private void txtPass_Click(object sender, EventArgs e)
+        {
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             if (txtPass.Text == "Mật khẩu")
             {
                 txtPass.Text = "";
             }
+<<<<<<< HEAD
+=======
             txtPass.PasswordChar = '*';
         }
 
@@ -158,14 +218,27 @@ namespace PBL3
 
         private void txtuser_TextChanged(object sender, EventArgs e)
         {
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             if (txtuser.Text == "Tên người dùng")
             {
                 txtuser.Text = "";
             }
         }
 
+<<<<<<< HEAD
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+=======
 
 
   
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

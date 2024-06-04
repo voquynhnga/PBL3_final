@@ -24,7 +24,11 @@ namespace PBL3.DAL
         public string product_name { get; set; }
         public string description { get; set; }
     
+<<<<<<< HEAD
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShoulDBeReadOnly")]
+=======
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         public virtual ICollection<ChiTietSanPham> ChiTietSanPhams { get; set; }
     }
 }

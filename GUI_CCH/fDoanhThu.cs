@@ -111,6 +111,15 @@ namespace PBL3.GUI_CCH
             }
             foreach (ProductTypeReport i in bll.GetProductTypeReports(d2, d2))
             {
+<<<<<<< HEAD
+                if (i.TenLoaiHang == "Sneaker")
+                { a[0, 0] += i.TongTien; a[0, 1] = (a[0, 1] + i.TongTien) / (b[0]); }
+                if (i.TenLoaiHang == "Phụ kiện")
+                { a[1, 0] += i.TongTien; a[1, 1] = (a[1, 1] + i.TongTien) / (b[1]); }
+                if (i.TenLoaiHang == "Sandal")
+                { a[2, 0] += i.TongTien; a[2, 1] = (a[2, 1] + i.TongTien) / (b[2]); }
+                if (i.TenLoaiHang == "Tất")
+=======
                 if (i.TenLoaiHang == "Giày")
                 { a[0, 0] += i.TongTien; a[0, 1] = (a[0, 1] + i.TongTien) / (b[0]); }
                 if (i.TenLoaiHang == "Dép")
@@ -118,6 +127,7 @@ namespace PBL3.GUI_CCH
                 if (i.TenLoaiHang == "Sandal")
                 { a[2, 0] += i.TongTien; a[2, 1] = (a[2, 1] + i.TongTien) / (b[2]); }
                 if (i.TenLoaiHang == "Vớ")
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
                 { a[3, 0] += i.TongTien; a[3, 1] = (a[3, 1] + i.TongTien) / (b[3]); }
             }
             SneakerDT.Text = a[0, 0].ToString();
@@ -142,7 +152,11 @@ namespace PBL3.GUI_CCH
             foreach (string i in bll.GetAllLH())
             {
                 //chartDT.Series["DoanhThu"].Points.AddXY(i, a[j, 0]);
+<<<<<<< HEAD
+                chartControl1.Series["Doanh thu theo nhóm hàng"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(i, a[j, 0]));
+=======
                 chartControl1.Series["Doanh thu theo nhóm hàng"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(i, a[j, 0]                    ));
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
                 j++;
             }
@@ -154,11 +168,31 @@ namespace PBL3.GUI_CCH
         }
 
 
+<<<<<<< HEAD
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            pk1 = true;
+        }
+
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+=======
   
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             pk1 = true;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
         }
     }

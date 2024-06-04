@@ -41,7 +41,11 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+<<<<<<< HEAD
+            this.circularPictureEdit1 = new PBL3.GUI_NV.CircularPictureEdit();
+=======
             this.circularPictureEdit1 = new PBL3.GUI_NV.CircularPictureEdit1();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -306,7 +310,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+<<<<<<< HEAD
+        private CircularPictureEdit circularPictureEdit1;
+=======
         private CircularPictureEdit1 circularPictureEdit1;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

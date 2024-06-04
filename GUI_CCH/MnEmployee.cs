@@ -193,6 +193,8 @@ namespace PBL3.GUI_CCH
 
             }
         }
+<<<<<<< HEAD
+=======
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
@@ -205,5 +207,6 @@ namespace PBL3.GUI_CCH
             dateEdit1.EditValue = null;
             comboBoxEdit1.EditValue = null;
         }
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

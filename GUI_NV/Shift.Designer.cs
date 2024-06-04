@@ -78,7 +78,11 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(1239, 737);
             this.tableLayoutPanel.TabIndex = 7;
+<<<<<<< HEAD
+            this.tableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel_Paint);
+=======
             //this.tableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel_Paint);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             // 
             // Shift
             // 

@@ -53,7 +53,11 @@ using System.Linq;
 }
 #>
 
+<<<<<<< HEAD
+<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : DBContext
+=======
 <#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : DbContext
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 {
     public <#=code.Escape(container)#>()
         : base("name=<#=container.Name#>")
@@ -68,19 +72,32 @@ if (!loader.IsLazyLoadingEnabled(container))
 
 foreach (var entitySet in container.BaseEntitySets.OfType<EntitySet>())
 {
+<<<<<<< HEAD
+    // Note: the DBSet members are defined below such that the getter and
+    // setter always have the same accessibility as the DBSet definition
+    if (Accessibility.ForReadOnlyProperty(entitySet) != "public")
+    {
+#>
+        <#=codeStringGenerator.DBSetInitializer(entitySet)#>
+=======
     // Note: the DbSet members are defined below such that the getter and
     // setter always have the same accessibility as the DbSet definition
     if (Accessibility.ForReadOnlyProperty(entitySet) != "public")
     {
 #>
         <#=codeStringGenerator.DbSetInitializer(entitySet)#>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 <#
     }
 }
 #>
     }
 
+<<<<<<< HEAD
+    protected override void OnModelCreating(DBModelBuilder modelBuilder)
+=======
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     {
         throw new UnintentionalCodeFirstException();
     }
@@ -89,7 +106,11 @@ foreach (var entitySet in container.BaseEntitySets.OfType<EntitySet>())
     foreach (var entitySet in container.BaseEntitySets.OfType<EntitySet>())
     {
 #>
+<<<<<<< HEAD
+    <#=codeStringGenerator.DBSet(entitySet)#>
+=======
     <#=codeStringGenerator.DbSet(entitySet)#>
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 <#
     }
 
@@ -117,7 +138,11 @@ private void WriteFunctionImport(TypeMapper typeMapper, CodeStringGenerator code
     {
 #>
 
+<<<<<<< HEAD
+    [DBFunction("<#=edmFunction.NamespaceName#>", "<#=edmFunction.Name#>")]
+=======
     [DbFunction("<#=edmFunction.NamespaceName#>", "<#=edmFunction.Name#>")]
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     <#=codeStringGenerator.ComposableFunctionMethod(edmFunction, modelNamespace)#>
     {
 <#+
@@ -156,7 +181,11 @@ public void WriteFunctionParameter(string name, string isNotNull, string notNull
 <#+
 }
 
+<<<<<<< HEAD
+public const string TemplateId = "CSharp_DBContext_Context_EF6";
+=======
 public const string TemplateId = "CSharp_DbContext_Context_EF6";
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
 public class CodeStringGenerator
 {
@@ -304,17 +333,29 @@ public class CodeStringGenerator
             callParams);
     }
     
+<<<<<<< HEAD
+    public string DBSet(EntitySet entitySet)
+    {
+        return string.Format(
+            CultureInfo.InvariantCulture,
+            "{0} virtual DBSet<{1}> {2} {{ get; set; }}",
+=======
     public string DbSet(EntitySet entitySet)
     {
         return string.Format(
             CultureInfo.InvariantCulture,
             "{0} virtual DbSet<{1}> {2} {{ get; set; }}",
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             Accessibility.ForReadOnlyProperty(entitySet),
             _typeMapper.GetTypeName(entitySet.ElementType),
             _code.Escape(entitySet));
     }
 
+<<<<<<< HEAD
+    public string DBSetInitializer(EntitySet entitySet)
+=======
     public string DbSetInitializer(EntitySet entitySet)
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     {
         return string.Format(
             CultureInfo.InvariantCulture,

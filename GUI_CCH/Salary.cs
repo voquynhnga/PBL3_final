@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿using PBL3.DAL;
+=======
 ﻿using DevExpress.Data;
 using PBL3.DAL;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,10 +13,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
 using DevExpress.XtraTreeList.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Data.Filtering;
 using System.Data.SqlClient;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
 namespace PBL3.GUI_CCH
 {
@@ -26,6 +33,8 @@ namespace PBL3.GUI_CCH
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             bool allConditionsMet = true;
 
             if (txt_Thuong.EditValue == null)
@@ -134,10 +143,16 @@ namespace PBL3.GUI_CCH
                 Salary_Load(sender, e);
 
             }
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
         private void Salary_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            lichLamBindingSource.DataSource = db.LichLams.ToList();
+
+        }
+=======
 
             nhanVienBindingSource.DataSource = db.NhanViens.ToList();
             var data = db.LichLams.GroupBy(x => new { x.NgayLam.Month, x.NgayLam.Year })
@@ -161,5 +176,6 @@ namespace PBL3.GUI_CCH
         }
 
 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }
