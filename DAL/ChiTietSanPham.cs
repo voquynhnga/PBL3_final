@@ -28,7 +28,7 @@ namespace PBL3.DAL
         public Nullable<int> ID_LoHang { get; set; }
         public int SoLuong { get; set; }
         public double Gia { get; set; }
-        public Nullable<double> Gia_nhap { get; set; }
+        public double Gia_nhap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }

@@ -56,6 +56,7 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.colThuong = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -130,7 +131,8 @@
             this.colID_NV,
             this.colLuong,
             this.colNhanVien,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.colThuong});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -145,6 +147,7 @@
             // 
             // colLuong
             // 
+            this.colLuong.Caption = "Lương";
             this.colLuong.FieldName = "Luong";
             this.colLuong.MinWidth = 25;
             this.colLuong.Name = "colLuong";
@@ -155,9 +158,10 @@
             // colNhanVien
             // 
             this.colNhanVien.Caption = "Nhân viên";
-            this.colNhanVien.FieldName = "NhanVien.NameNV";
+            this.colNhanVien.FieldName = "NhanVien";
             this.colNhanVien.MinWidth = 25;
             this.colNhanVien.Name = "colNhanVien";
+            this.colNhanVien.OptionsColumn.ReadOnly = true;
             this.colNhanVien.Visible = true;
             this.colNhanVien.VisibleIndex = 1;
             this.colNhanVien.Width = 94;
@@ -201,13 +205,13 @@
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
-            this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 9;
             this.dateEdit1.Properties.DisplayFormat.FormatString = "MM/yyyy";
             this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dateEdit1.Properties.MaskSettings.Set("mask", "MM/yyyy");
-            this.dateEdit1.Size = new System.Drawing.Size(596, 22);
+            this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateEdit1.Size = new System.Drawing.Size(592, 22);
+            this.dateEdit1.StyleController = this.layoutControl1;
+            this.dateEdit1.TabIndex = 9;
             // 
             // cbb_Ap
             // 
@@ -351,6 +355,16 @@
             this.emptySpaceItem5.Size = new System.Drawing.Size(86, 31);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // colThuong
+            // 
+            this.colThuong.Caption = "Thưởng";
+            this.colThuong.FieldName = "Thuong";
+            this.colThuong.MinWidth = 25;
+            this.colThuong.Name = "colThuong";
+            this.colThuong.Visible = true;
+            this.colThuong.VisibleIndex = 4;
+            this.colThuong.Width = 94;
+            // 
             // Salary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,5 +430,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraEditors.CheckedComboBoxEdit cbb_Ap;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colThuong;
     }
 }

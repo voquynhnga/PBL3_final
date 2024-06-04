@@ -15,12 +15,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace PBL3.GUI_CCH
 {
     public partial class MnProduct_CCH : Form
     {
         QLCH_3Entities db = new QLCH_3Entities();
+        CultureInfo culture = new CultureInfo("vi-VN");
         public MnProduct_CCH()
         {
             InitializeComponent();
@@ -86,36 +88,7 @@ namespace PBL3.GUI_CCH
 
         private void btn_Edit_Click_1(object sender, EventArgs e)
         {
-            //int rowIndex = gridView1.GetSelectedRows()[0];
-            //ProductInCM selectedProduct = gridView1.GetRow(rowIndex) as ProductInCM;
 
-            //var tensp = txt_TenSP.Text;
-            //var loaihang = cb_LoaiHang.Text;
-            ////var ncc = txt_NCC.Text;
-            //var size = Convert.ToInt32(spin_Size.EditValue);
-            //var mau = txt_Mau.EditValue.ToString();
-            //var soluong = Convert.ToInt32(spin_SL.EditValue);
-
-            //foreach (ProductInCM i in products)
-            //{
-            //    if (i == selectedProduct)
-            //    {
-            //        i.Ten_SP = tensp;
-            //        i.Ten_LoaiHang = loaihang;
-            //       // i.Ten_NCC = ncc;
-            //        i.Size = size;
-            //        i.MauSac = mau;
-            //        i.SoLuong = soluong;
-            //    }
-            //}
-            //gridControl1.DataSource = null;
-            //gridControl1.DataSource = products;
-
-            //var gv = gridView1;
-
-            //if (gv.IsDataRow(gv.FocusedRowHandle))
-
-            //{
             var gv = gridView1;
 
             if (gv.IsDataRow(gv.FocusedRowHandle))
@@ -132,10 +105,13 @@ namespace PBL3.GUI_CCH
                     ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
                     size_id = Convert.ToInt32(txt_Size.EditValue),
                     color_id = Convert.ToInt32(txt_Mau.EditValue),
-                    Gia = Convert.ToDouble(txt_Price.EditValue),
-                    
+                    Gia = Convert.ToDouble(txt_Priceout.EditValue),
+                    Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue),
+
+
 
                     SoLuong = Convert.ToInt32(txt_SL.EditValue),
+
 
 
                
@@ -148,7 +124,6 @@ namespace PBL3.GUI_CCH
 
                 {
 
-                    //existingLH.ID_NCC = lhEdit.ID_NCC;
 
                     existingSP.SoLuong = spEdit.SoLuong;
                     existingSP.Gia = spEdit.Gia;
@@ -156,21 +131,15 @@ namespace PBL3.GUI_CCH
                     existingSP.ID_LoaiHang = spEdit.ID_LoaiHang;
                     existingSP.color_id = spEdit.color_id;
                     existingSP.size_id = spEdit.size_id;
-                    try
+                    existingSP.Gia_nhap = spEdit.Gia_nhap;
 
-                    {
+ 
 
                         db.SaveChanges();
 
-                    }
+                    
 
-                    catch (DbUpdateException ex)
 
-                    {
-
-                        MessageBox.Show("Xung đột khóa ngoại. Vui lòng kiểm tra thông tin nhập.");
-
-                    }
 
                 }
 
@@ -185,6 +154,11 @@ namespace PBL3.GUI_CCH
 
 
             int lastID = db.ChiTietSanPhams.OrderByDescending(x => x.ID_CTSP).FirstOrDefault()?.ID_CTSP ?? 0;
+            if(Convert.ToDouble(txt_Pricein.EditValue) > Convert.ToDouble(txt_Priceout.EditValue))
+            {
+                label1.Text = "Giá bán phải cao hơn giá nhập!";
+                txt_Priceout.Focus();
+            }
 
             ChiTietSanPham sp = new ChiTietSanPham
             {
@@ -198,19 +172,15 @@ namespace PBL3.GUI_CCH
                 color_id = Convert.ToInt32(txt_Mau.EditValue),
                 ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
                 SoLuong = Convert.ToInt32(txt_SL.EditValue),
-                Gia = Convert.ToDouble(txt_Price.EditValue)
+                Gia = Convert.ToDouble(txt_Priceout.EditValue),
+                Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue),
 
-                //product_id = Te
-       
-                //Luong = 0,
-                // TaiKhoan = "";
 
 
 
             };
             db.ChiTietSanPhams.Add(sp);
             db.SaveChanges();
-            //ReloadGridView();
             MnProduct_CCH_Load(sender, e);
         }
   
@@ -223,9 +193,10 @@ namespace PBL3.GUI_CCH
             txt_Size.EditValue = 0;
             txt_Mau.Text = "";
             txt_SL.EditValue = 0;
-            txt_Price.EditValue = 0;
-            txt_IN.EditValue = 0;
+            txt_Priceout.EditValue = "";
+            txt_IN.EditValue = "";
             txt_TenSP.Focus();
+            txt_Pricein.Text = "";
         }
 
  
@@ -246,14 +217,9 @@ namespace PBL3.GUI_CCH
                     {
                         int deleteID = selectedSP.ID_CTSP;
 
-                        //db.ChiTietSanPhams.Attach(selectedSP);
                         db.ChiTietSanPhams.Remove(selectedSP);
                         db.SaveChanges();
 
-
-                        //gridControl1.DataSource = null;
-
-                        //gridControl1.DataSource = db.LoHangs.ToList();
 
                         var remainingSP = db.ChiTietSanPhams.Where(n => n.ID_CTSP > deleteID).ToList();
 
@@ -269,8 +235,7 @@ namespace PBL3.GUI_CCH
                     MnProduct_CCH_Load(sender, e);
 
                 }
-               // gridControl1.DataSource = null;
-                //gridControl1.DataSource = products;
+ 
             }
 
         }
@@ -287,14 +252,14 @@ namespace PBL3.GUI_CCH
             if (gv.IsDataRow(e.FocusedRowHandle))
             {
                 var sp = gv.GetFocusedRow() as ChiTietSanPham;
-                // var ncc = db.NhaCungCaps.FirstOrDefault(n => n.ID_NCC == lh.ID_NCC);
                 txt_TenSP.EditValue = sp.product_id;
                 txt_SL.EditValue = sp.SoLuong;
                 txt_IN.EditValue = sp.ID_LoHang;
-                txt_Price.EditValue = sp.Gia;
+                txt_Priceout.EditValue =  sp.Gia.ToString("C", culture);          
                 txt_Mau.EditValue = sp.color_id;
                 txt_LoaiHang.EditValue = sp.ID_LoaiHang;
                 txt_Size.EditValue = sp.size_id;
+                txt_Pricein.EditValue = sp.Gia_nhap.ToString("C", culture);
 
 
             }
@@ -322,13 +287,14 @@ namespace PBL3.GUI_CCH
                 txt_TenSP.EditValue = newSP.product_id;
                 UpdateDataSource();
 
-                //var data_SP = db.SanPhams.Select(p => new { p.product_id, p.product_name }).ToList();
-                //txt_TenSP.Properties.DataSource = data_SP;
-                //txt_TenSP_ProcessNewValue_1(sender, e);
 
 
 
             }
         }
+
+
+
+ 
     }
 }
