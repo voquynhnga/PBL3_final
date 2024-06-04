@@ -45,7 +45,7 @@ namespace PBL3
             labelControl1.ForeColor = System.Drawing.Color.Red;
             //labelControl1.Parent = pictureBox2;
             labelControl1.BackColor = System.Drawing.Color.Transparent;
-            //labelControl1.Hide();
+            labelControl1.Hide();
             
             // ctrl = new Controller(this);
         }

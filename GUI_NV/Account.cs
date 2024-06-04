@@ -30,23 +30,6 @@ namespace PBL3_qnv.GUI
             textBox5.KeyPress += new KeyPressEventHandler(Account_KeyPress);
             textBox6.KeyPress += new KeyPressEventHandler(Account_KeyPress);
 
-            label2.Parent = panelControl1;
-            label2.BackColor = System.Drawing.Color.Transparent;
-
-            label5.Parent = panelControl1;
-            label5.BackColor = System.Drawing.Color.Transparent;
-
-            label9.Parent = panelControl1;
-            label9.BackColor = System.Drawing.Color.Transparent;
-
-            label6.Parent = panelControl1;
-            label6.BackColor = System.Drawing.Color.Transparent;
-
-            label8.Parent = panelControl1;
-            label8.BackColor = System.Drawing.Color.Transparent;
-
-            textBox1.Parent = panelControl1;
-            textBox1.BackColor = System.Drawing.Color.Red;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,6 +84,8 @@ namespace PBL3_qnv.GUI
             textBox5.Text = nv.CCCD.ToString();
             textBox6.Text = currentUser.Loai_TK.ToString();*/
 
+
+
         }
 
         private void Account_KeyPress(object sender, KeyPressEventArgs e)
@@ -128,7 +113,26 @@ namespace PBL3_qnv.GUI
 
         private void Account_Load(object sender, EventArgs e)
         {
+            label2.Parent = panelControl1;
+            label2.BackColor = System.Drawing.Color.Transparent;
 
+            label3.Parent = panelControl1;
+            label3.BackColor = System.Drawing.Color.Transparent;
+
+            label5.Parent = panelControl1;
+            label5.BackColor = System.Drawing.Color.Transparent;
+
+            label9.Parent = panelControl1;
+            label9.BackColor = System.Drawing.Color.Transparent;
+
+            label6.Parent = panelControl1;
+            label6.BackColor = System.Drawing.Color.Transparent;
+
+            label8.Parent = panelControl1;
+            label8.BackColor = System.Drawing.Color.Transparent;
+
+            textBox1.Parent = panelControl1;
+            textBox1.BackColor = System.Drawing.Color.Red;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
