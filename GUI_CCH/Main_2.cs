@@ -78,7 +78,11 @@ namespace PBL3.GUI_CCH
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             OpenChildForm(new Shift_CCH());
+=======
+            OpenChildForm(new ShiftCCH());
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
         private void accordionControlElement12_Click(object sender, EventArgs e)
@@ -102,6 +106,14 @@ namespace PBL3.GUI_CCH
         {
             OpenChildForm(new Salary());
         }
+<<<<<<< HEAD
+=======
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TKNV());
+        }
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }
 

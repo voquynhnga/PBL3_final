@@ -24,10 +24,23 @@ namespace PBL3.GUI_NV
         {
             // products = new BindingList<ChiTietSanPham>(DBContext.ChiTietSanPhams.ToList());
             // dataGridView1.DataSource = products;
+<<<<<<< HEAD
             ChiTietSanPhamBindingSource.DataSource = DBContext.ChiTietSanPhams.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
+=======
+            chiTietSanPhamBindingSource.DataSource = DBContext.ChiTietSanPhams.ToList();
+        }
+
+  
+
+
+  
+
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         {
             if (gridView1.SelectedRowsCount == 1)
             {
@@ -39,6 +52,7 @@ namespace PBL3.GUI_NV
             }
             this.Close();
             this.FormClosed += new FormClosedEventHandler(AddProductEvent);
+<<<<<<< HEAD
 
         }
 
@@ -87,6 +101,8 @@ namespace PBL3.GUI_NV
         private void gridControl1_TextChanged(object sender, EventArgs e)
         {
             //DBContext.SaveChanges();
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
     }
 }

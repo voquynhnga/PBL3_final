@@ -334,7 +334,11 @@
   <data name="pictureEdit1.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwEAAAZACAIAAACuQdksAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+<<<<<<< HEAD
         wgAADsIBFShKgAAA/7JJREFUeF7UvYmS67jSpDnv/5596+xrZiqXautxD49wBABSUp6q+0+P2WdKEAgE
+=======
+        wAAADsABataJCQAA/7JJREFUeF7UvYmS67jSpDnv/5596+xrZiqXautxD49wBABSUp6q+0+P2WdKEAgE
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         VgKeJEX9Px9+X8DHh2fx6fHFARMxT+DT40V8fnruVPyea7hdYu7k3bl+P39qle9Jaqkbq0C3ca5bXD6h
         Kx6ePqMf0GSU2Pj464UclPhqEPPXrydggzPkp7sCe17FnNEtdxbjxuU/P8lfv547jPzx8p+fEfj5KP7X
         jwfx149H8OHnE/j4C3l/f3h4+Pjw+PERk4cg/OXhYr4+Pn9BH2ZnDtzDH3/TD1D3wq27Wij1kGEDRk++

@@ -22,6 +22,10 @@ namespace PBL3.GUI_NV
     public partial class FinalBill : Form
     {
         Main_NV mf = Application.OpenForms["Main_NV"] as Main_NV;
+<<<<<<< HEAD
+=======
+        Order o = Order.Instance;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         // Bill1 b1 = Bill1.Instance_bill;
         //QLCH_3Entities DB = new QLCH_3Entities();
         //private readonly UnitOfWork _unitOfWork;
@@ -34,6 +38,7 @@ namespace PBL3.GUI_NV
             Load_FinalBill();
         }
 
+<<<<<<< HEAD
         private void FinalBill_Load(object sender, EventArgs e)
         {
             label3.Parent = customPanel1;
@@ -54,6 +59,8 @@ namespace PBL3.GUI_NV
 
         }
 
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         private void Load_FinalBill()
         {
             // Order orderForm = Application.OpenForms["OrderForm"] as Order;
@@ -80,27 +87,44 @@ namespace PBL3.GUI_NV
 
             }
             int lastID = db.DonHangs.OrderByDescending(x => x.ID_HoaDon).FirstOrDefault()?.ID_HoaDon ?? 1;
+<<<<<<< HEAD
             textBox4.Text = lastID.ToString();
             textBox1.Text = Bill1.Instance_bill.textBox7.Text;
+=======
+            textBox4.Text = (lastID +1).ToString();
+            textBox1.Text = o.textBox9.Text;
+
+
+
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
         public DonHang Get_DonHang()
         {
 
 
+<<<<<<< HEAD
             var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == Bill1.Instance_bill.textBox2.Text);
             int nvID; // Biến để lưu ID_NV hợp lệ
+=======
+            var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == o.textBox8.Text);
+            int nvID = 0; 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             int user_ID = Controller.Instance.Get_ID(Controller.user.TaiKhoan1);
             if (Controller.user != null)
             {
                 var nv = db.NhanViens.FirstOrDefault(n => n.ID_NV == user_ID);
                 nvID = nv.ID_NV;
             }
+<<<<<<< HEAD
             else
             {
                 // Xử lý khi Controller.user không tồn tại
                 nvID = 100; // Có thể là 0 hoặc giá trị mặc định khác
             }
+=======
+
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             DonHang dh = new DonHang()
             {
                 ID_HoaDon = Convert.ToInt32(textBox4.Text),
@@ -130,8 +154,13 @@ namespace PBL3.GUI_NV
 
                     string[] btnInfo = btn.Text.Split(',');
                     string btnName = btnInfo[0].Trim();
+<<<<<<< HEAD
                     var pr = db.SanPhams.FirstOrDefault(p => p.product_name == btnName);
                     var pr_d = db.ChiTietSanPhams.FirstOrDefault(p => p.ID_CTSP == pr.product_id);
+=======
+                    //var pr = db.SanPhams.FirstOrDefault(p => p.product_name == btnName);
+                    var pr_d = db.ChiTietSanPhams.FirstOrDefault(p => p.SanPham.product_name == btnName);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
                     ChiTietDonHang i = new ChiTietDonHang
                     {
@@ -182,7 +211,11 @@ namespace PBL3.GUI_NV
             ///FIXING
             CompleteBill();
             this.Close();
+<<<<<<< HEAD
             Bill1.Instance_bill.Close();
+=======
+            o.Close();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             Order.Instance.Close();
             mf.Show();
         }
@@ -248,6 +281,7 @@ namespace PBL3.GUI_NV
                 e.Handled = true;
             }
         }
+<<<<<<< HEAD
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -263,5 +297,7 @@ namespace PBL3.GUI_NV
         {
 
         }
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

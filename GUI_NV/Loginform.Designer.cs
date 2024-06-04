@@ -56,10 +56,16 @@
             this.bLogin.FlatAppearance.BorderSize = 0;
             this.bLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bLogin.ForeColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             this.bLogin.Location = new System.Drawing.Point(321, 504);
             this.bLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bLogin.Name = "bLogin";
             this.bLogin.Size = new System.Drawing.Size(213, 57);
+=======
+            this.bLogin.Location = new System.Drawing.Point(370, 323);
+            this.bLogin.Name = "bLogin";
+            this.bLogin.Size = new System.Drawing.Size(142, 36);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.bLogin.TabIndex = 10;
             this.bLogin.Text = "Đăng nhập";
             this.bLogin.UseVisualStyleBackColor = false;
@@ -68,6 +74,7 @@
             // txtPass
             // 
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPass.Location = new System.Drawing.Point(70, 328);
@@ -77,11 +84,21 @@
             this.txtPass.TabIndex = 9;
             this.txtPass.Text = "Mật khẩu";
             this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
+=======
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtPass.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPass.Location = new System.Drawing.Point(203, 210);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(311, 27);
+            this.txtPass.TabIndex = 9;
+            this.txtPass.Text = "Mật khẩu";
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // txtuser
             // 
             this.txtuser.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtuser.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtuser.Location = new System.Drawing.Point(70, 242);
@@ -91,11 +108,21 @@
             this.txtuser.TabIndex = 8;
             this.txtuser.Text = "Tên người dùng";
             this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
+=======
+            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtuser.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtuser.Location = new System.Drawing.Point(203, 155);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(311, 27);
+            this.txtuser.TabIndex = 8;
+            this.txtuser.Text = "Tên người dùng";
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelControl1.Appearance.Options.UseBackColor = true;
@@ -107,16 +134,34 @@
             this.labelControl1.Size = new System.Drawing.Size(335, 33);
             this.labelControl1.TabIndex = 14;
             this.labelControl1.Text = "Sai mật khẩu";
+=======
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Appearance.Options.UseBackColor = true;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(203, 244);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(583, 27);
+            this.labelControl1.TabIndex = 14;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(476, 328);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 43);
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(476, 210);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 26);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -126,12 +171,22 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(71, 99);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(317, 81);
+=======
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseBackColor = true;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(203, 63);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(244, 48);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.labelControl2.TabIndex = 15;
             this.labelControl2.Text = "Đăng nhập";
             // 
@@ -140,15 +195,23 @@
             this.panelControl1.Controls.Add(this.pictureEdit1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(359, 723);
             this.panelControl1.TabIndex = 17;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+=======
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(239, 463);
+            this.panelControl1.TabIndex = 17;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+<<<<<<< HEAD
             this.pictureEdit1.Location = new System.Drawing.Point(3, 3);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -159,6 +222,20 @@
             // panelControl2
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
+=======
+            this.pictureEdit1.Location = new System.Drawing.Point(2, 2);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(235, 459);
+            this.pictureEdit1.TabIndex = 0;
+            //this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Turquoise;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.bLogin);
@@ -167,13 +244,21 @@
             this.panelControl2.Controls.Add(this.pictureBox1);
             this.panelControl2.Controls.Add(this.txtPass);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< HEAD
             this.panelControl2.Location = new System.Drawing.Point(359, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(731, 723);
+=======
+            this.panelControl2.Location = new System.Drawing.Point(239, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(799, 463);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.panelControl2.TabIndex = 18;
             // 
             // Loginform
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 723);
@@ -181,6 +266,14 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1038, 463);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.Name = "Loginform";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.Loginform_Load);

@@ -26,7 +26,11 @@ namespace PBL3_qnv
         static Loginform lg = Application.OpenForms["Loginform"] as Loginform;
         private static Controller instance;
         public static TaiKhoan user = lg.GetUser();
+<<<<<<< HEAD
         QLCH_3Entities db = new QLCH_3Entities();
+=======
+       QLCH_3Entities db = new QLCH_3Entities();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
 
         public static Controller Instance
@@ -84,6 +88,7 @@ namespace PBL3_qnv
 
 
 
+<<<<<<< HEAD
         }
 
         public int Check_type(TaiKhoan user)
@@ -156,6 +161,80 @@ namespace PBL3_qnv
 
                 {
 
+=======
+        }
+
+        public int Check_type(TaiKhoan user)
+
+        {
+
+
+
+            var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+
+
+
+            if (userFromDB != null)
+
+            {
+
+                if (userFromDB.Loai_TK == "Nhân viên")
+
+                {
+
+                    return 1;
+
+                }
+
+                if (userFromDB.Loai_TK == "Chủ cửa hàng")
+                {
+
+                    return 2;
+
+                }
+
+            }
+
+            return 0;
+
+        }
+
+    
+
+        public void SavePass(TaiKhoan user)
+
+        {
+
+
+
+                var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+
+                if (userFromDB != null)
+
+                {
+
+                    userFromDB.MatKhau = user.MatKhau;
+                    db.SaveChanges();
+
+                }
+
+            
+
+        }
+
+        public bool IsNumeric(string input)
+
+        {
+
+            foreach (char c in input)
+
+            {
+
+                if (!char.IsDigit(c))
+
+                {
+
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
                     return false;
 
                 }

@@ -38,6 +38,10 @@
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+<<<<<<< HEAD
+=======
+            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -56,7 +60,11 @@
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(264, 39);
+<<<<<<< HEAD
             this.container.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+=======
+            this.container.Margin = new System.Windows.Forms.Padding(12);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(829, 683);
             this.container.TabIndex = 0;
@@ -70,7 +78,11 @@
             this.accordionControlElement9,
             this.accordionControlElement10});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+<<<<<<< HEAD
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+=======
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(12);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(264, 683);
@@ -112,9 +124,15 @@
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6,
+<<<<<<< HEAD
             this.accordionControlElement7,
             this.accordionControlElement8});
             this.accordionControlElement5.Expanded = true;
+=======
+            this.accordionControlElement14,
+            this.accordionControlElement7,
+            this.accordionControlElement8});
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.accordionControlElement5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement5.ImageOptions.SvgImage")));
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Nhân sự";
@@ -126,6 +144,16 @@
             this.accordionControlElement6.Text = "Thông tin nhân viên";
             this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
+<<<<<<< HEAD
+=======
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement14.Text = "Tài khoản nhân viên";
+            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click);
+            // 
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             // accordionControlElement7
             // 
             this.accordionControlElement7.Name = "accordionControlElement7";
@@ -146,7 +174,10 @@
             this.accordionControlElement11,
             this.accordionControlElement12,
             this.accordionControlElement13});
+<<<<<<< HEAD
             this.accordionControlElement9.Expanded = true;
+=======
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             this.accordionControlElement9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement9.ImageOptions.SvgImage")));
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Text = "Kho hàng";
@@ -205,7 +236,11 @@
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "Main_2";
             this.NavigationControl = this.accordionControl1;
+<<<<<<< HEAD
             this.Text = "Main_2";
+=======
+            this.Text = "Chủ cửa hàng";
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -231,5 +266,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+<<<<<<< HEAD
+=======
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

@@ -193,5 +193,20 @@ namespace PBL3.GUI_CCH
 
             }
         }
+<<<<<<< HEAD
+=======
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            txt_Ten.EditValue = null;
+            txt_SDT.EditValue = null;
+            //txt_Add.EditValue = nv.Dia
+            txt_CC.EditValue = null;
+            txt_CV.EditValue = null;
+            txt_Email.EditValue = null;
+            dateEdit1.EditValue = null;
+            comboBoxEdit1.EditValue = null;
+        }
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
     }
 }

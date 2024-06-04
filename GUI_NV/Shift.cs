@@ -18,6 +18,11 @@ namespace PBL3.GUI_CCH
     public partial class Shift : Form
     {
         QLCH_3Entities DB = new QLCH_3Entities();
+<<<<<<< HEAD
+=======
+        List<(DateTime Day, string ShiftTime)> selectedShifts = new List<(DateTime Day, string ShiftTime)>();
+
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         public Shift()
         {
             InitializeComponent();
@@ -136,8 +141,12 @@ namespace PBL3.GUI_CCH
                 DateTime day = data.Day;
                 string shiftTime = data.ShiftTime;
 
+<<<<<<< HEAD
                 // Save the new shift registration to the database
                 SaveShiftRegistration(day, shiftTime);
+=======
+                selectedShifts.Add((day, shiftTime));
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
             }
         }
 
@@ -145,6 +154,7 @@ namespace PBL3.GUI_CCH
         {
             int user_ID = Controller.Instance.Get_ID(Controller.user.TaiKhoan1);
 
+<<<<<<< HEAD
             //LichLam newShift = new LichLam
             //{
             //    ID_NV = user_ID,
@@ -164,10 +174,26 @@ namespace PBL3.GUI_CCH
            new SqlParameter("@Luong", 0.0)
            
        );
+=======
+            DB.Database.ExecuteSqlCommand(
+
+    "EXEC InsertLichLam @ID_NV, @NgayLam, @CaLam, @Luong",
+
+    new SqlParameter("@ID_NV", user_ID),
+
+    new SqlParameter("@NgayLam", SqlDbType.DateTime) { Value = day },
+
+    new SqlParameter("@CaLam", SqlDbType.NVarChar) { Value = shiftTime },
+
+    new SqlParameter("@Luong", SqlDbType.Float) { Value = 0.0 }
+
+);
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
 
             LoadCalendar();
         }
 
+<<<<<<< HEAD
 
 
 
@@ -180,6 +206,19 @@ namespace PBL3.GUI_CCH
         {
             // ShowShiftRegistrationForm(dateTimePicker.Value);
             LoadCalendar();
+=======
+        private void btnRegisterShift_Click_1(object sender, EventArgs e)
+        {
+            // ShowShiftRegistrationForm(dateTimePicker.Value);
+            foreach (var shift in selectedShifts)
+
+            {
+
+                SaveShiftRegistration(shift.Day, shift.ShiftTime);
+
+            }
+            //LoadCalendar();
+>>>>>>> 85abff1a886188270143c988969a866dbdb94731
         }
 
         private void Shift_Load(object sender, EventArgs e)
