@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PBL3.GUI_CCH
 {
@@ -26,6 +27,7 @@ namespace PBL3.GUI_CCH
         public MnProduct_CCH()
         {
             InitializeComponent();
+
         }
 
         private List<ProductInCM> products = new List<ProductInCM>();
@@ -293,8 +295,30 @@ namespace PBL3.GUI_CCH
             }
         }
 
+        private void txt_Pricein_EditValueChanged(object sender, EventArgs e)
+        {
 
 
- 
+            if (double.TryParse(txt_Pricein.Text, NumberStyles.Currency, new CultureInfo("vi-VN"), out double result))
+            {
+
+                txt_Pricein.Text = result.ToString("C", new CultureInfo("vi-VN"));
+
+                txt_Priceout.Select(txt_Pricein.Text.Length, 0);
+
+            }
+        }
+
+            private void txt_Priceout_EditValueChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(txt_Priceout.Text, NumberStyles.Currency, new CultureInfo("vi-VN"), out double result))
+            {
+
+                txt_Priceout.Text = result.ToString("C", new CultureInfo("vi-VN"));
+
+                txt_Priceout.Select(txt_Priceout.Text.Length, 0); // Để di chuyển con trỏ về cuối txt_Pricein
+
+            }
+        }
     }
 }
