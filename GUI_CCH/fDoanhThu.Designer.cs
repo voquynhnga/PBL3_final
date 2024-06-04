@@ -31,35 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fDoanhThu));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.customPanel2 = new PBL3.GUI_CCH.CustomPanel();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.TextPK = new System.Windows.Forms.Label();
-            this.PhuKienDT = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.customPanel4 = new PBL3.GUI_CCH.CustomPanel();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.TextTat = new System.Windows.Forms.Label();
-            this.TatDT = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.customPanel3 = new PBL3.GUI_CCH.CustomPanel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.TextSD = new System.Windows.Forms.Label();
-            this.SandalDT = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.customPanel1 = new PBL3.GUI_CCH.CustomPanel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.TextSNK = new System.Windows.Forms.Label();
-            this.SneakerDT = new System.Windows.Forms.Label();
             this.rjButton1 = new PBL3.GUI_CCH.RJButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TatDT = new System.Windows.Forms.Label();
+            this.SandalDT = new System.Windows.Forms.Label();
+            this.SneakerDT = new System.Windows.Forms.Label();
+            this.PhuKienDT = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             this.customPanel2.SuspendLayout();
             this.customPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             this.customPanel3.SuspendLayout();
             this.customPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             this.panelControl1.Controls.Add(this.dateTimePicker1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(997, 550);
             this.panelControl1.TabIndex = 17;
@@ -93,12 +93,53 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(22, 259);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(471, 248);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // customPanel2
+            // 
+            this.customPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customPanel2.BackColor = System.Drawing.Color.White;
+            this.customPanel2.BorderRadius = 0;
+            this.customPanel2.Controls.Add(this.labelControl2);
+            this.customPanel2.Controls.Add(this.TextPK);
+            this.customPanel2.Controls.Add(this.PhuKienDT);
+            this.customPanel2.ForeColor = System.Drawing.Color.Black;
+            this.customPanel2.GradientAngle = 90F;
+            this.customPanel2.GradientBotColor = System.Drawing.Color.LightBlue;
+            this.customPanel2.GradientTopColor = System.Drawing.Color.AliceBlue;
+            this.customPanel2.Location = new System.Drawing.Point(271, 118);
+            this.customPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.customPanel2.Name = "customPanel2";
+            this.customPanel2.Size = new System.Drawing.Size(222, 83);
+            this.customPanel2.TabIndex = 16;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(10, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(34, 20);
+            this.labelControl2.TabIndex = 18;
+            this.labelControl2.Text = "Dép";
+            // 
+            // TextPK
+            // 
+            this.TextPK.AutoSize = true;
+            this.TextPK.BackColor = System.Drawing.Color.Transparent;
+            this.TextPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TextPK.Location = new System.Drawing.Point(153, 52);
+            this.TextPK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TextPK.Name = "TextPK";
+            this.TextPK.Size = new System.Drawing.Size(14, 15);
+            this.TextPK.TabIndex = 2;
+            this.TextPK.Text = "0";
             // 
             // label2
             // 
@@ -126,114 +167,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Top sản phẩm bán chạy";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dateTimePicker2.CustomFormat = "dd/mm/yy";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(586, 31);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(295, 24);
-            this.dateTimePicker2.TabIndex = 2;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 5, 0, 0, 0, 0);
-            // 
-            // chartControl1
-            // 
-            this.chartControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chartControl1.Legend.LegendID = -1;
-            this.chartControl1.Location = new System.Drawing.Point(532, 259);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(437, 248);
-            this.chartControl1.TabIndex = 13;
-            this.chartControl1.Click += new System.EventHandler(this.chartControl1_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(57, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Từ Ngày";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dateTimePicker1.CustomFormat = "YY/MM/DD";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(151, 31);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(295, 24);
-            this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 1, 0, 0, 0, 0);
-            // 
-            // customPanel2
-            // 
-            this.customPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customPanel2.BackColor = System.Drawing.Color.White;
-            this.customPanel2.BorderRadius = 0;
-            this.customPanel2.Controls.Add(this.labelControl2);
-            this.customPanel2.Controls.Add(this.TextPK);
-            this.customPanel2.Controls.Add(this.PhuKienDT);
-            this.customPanel2.ForeColor = System.Drawing.Color.Black;
-            this.customPanel2.GradientAngle = 90F;
-            this.customPanel2.GradientBotColor = System.Drawing.Color.LightBlue;
-            this.customPanel2.GradientTopColor = System.Drawing.Color.AliceBlue;
-            this.customPanel2.Location = new System.Drawing.Point(271, 118);
-            this.customPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.customPanel2.Name = "customPanel2";
-            this.customPanel2.Size = new System.Drawing.Size(222, 83);
-            this.customPanel2.TabIndex = 16;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(10, 4);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(72, 20);
-            this.labelControl2.TabIndex = 18;
-            this.labelControl2.Text = "Phụ kiện";
-            // 
-            // TextPK
-            // 
-            this.TextPK.AutoSize = true;
-            this.TextPK.BackColor = System.Drawing.Color.Transparent;
-            this.TextPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TextPK.Location = new System.Drawing.Point(153, 52);
-            this.TextPK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TextPK.Name = "TextPK";
-            this.TextPK.Size = new System.Drawing.Size(14, 15);
-            this.TextPK.TabIndex = 2;
-            this.TextPK.Text = "0";
-            // 
-            // PhuKienDT
-            // 
-            this.PhuKienDT.AutoSize = true;
-            this.PhuKienDT.BackColor = System.Drawing.Color.Transparent;
-            this.PhuKienDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.PhuKienDT.Location = new System.Drawing.Point(7, 50);
-            this.PhuKienDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PhuKienDT.Name = "PhuKienDT";
-            this.PhuKienDT.Size = new System.Drawing.Size(89, 17);
-            this.PhuKienDT.TabIndex = 1;
-            this.PhuKienDT.Text = "PhuKienDT";
-            // 
             // customPanel4
             // 
             this.customPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -259,9 +192,9 @@
             this.labelControl4.Location = new System.Drawing.Point(11, 5);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(27, 20);
+            this.labelControl4.Size = new System.Drawing.Size(22, 20);
             this.labelControl4.TabIndex = 20;
-            this.labelControl4.Text = "Tất";
+            this.labelControl4.Text = "Vớ";
             // 
             // TextTat
             // 
@@ -275,17 +208,32 @@
             this.TextTat.TabIndex = 4;
             this.TextTat.Text = "0";
             // 
-            // TatDT
+            // dateTimePicker2
             // 
-            this.TatDT.AutoSize = true;
-            this.TatDT.BackColor = System.Drawing.Color.Transparent;
-            this.TatDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TatDT.Location = new System.Drawing.Point(7, 52);
-            this.TatDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TatDT.Name = "TatDT";
-            this.TatDT.Size = new System.Drawing.Size(53, 17);
-            this.TatDT.TabIndex = 3;
-            this.TatDT.Text = "TatDT";
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateTimePicker2.CustomFormat = "dd/mm/yy";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(586, 31);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(295, 24);
+            this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.Value = new System.DateTime(2024, 3, 5, 0, 0, 0, 0);
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chartControl1.Legend.LegendID = -1;
+            this.chartControl1.Location = new System.Drawing.Point(532, 259);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl1.Size = new System.Drawing.Size(437, 248);
+            this.chartControl1.TabIndex = 13;
+            this.chartControl1.Click += new System.EventHandler(this.chartControl1_Click_1);
             // 
             // customPanel3
             // 
@@ -328,17 +276,17 @@
             this.TextSD.TabIndex = 3;
             this.TextSD.Text = "0";
             // 
-            // SandalDT
+            // label1
             // 
-            this.SandalDT.AutoSize = true;
-            this.SandalDT.BackColor = System.Drawing.Color.Transparent;
-            this.SandalDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SandalDT.Location = new System.Drawing.Point(8, 53);
-            this.SandalDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SandalDT.Name = "SandalDT";
-            this.SandalDT.Size = new System.Drawing.Size(79, 17);
-            this.SandalDT.TabIndex = 2;
-            this.SandalDT.Text = "SandalDT";
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(57, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Từ Ngày";
             // 
             // customPanel1
             // 
@@ -365,9 +313,9 @@
             this.labelControl1.Location = new System.Drawing.Point(9, 5);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(69, 20);
+            this.labelControl1.Size = new System.Drawing.Size(39, 20);
             this.labelControl1.TabIndex = 17;
-            this.labelControl1.Text = "Sneaker";
+            this.labelControl1.Text = "Giày";
             // 
             // TextSNK
             // 
@@ -380,18 +328,6 @@
             this.TextSNK.Size = new System.Drawing.Size(14, 15);
             this.TextSNK.TabIndex = 1;
             this.TextSNK.Text = "0";
-            // 
-            // SneakerDT
-            // 
-            this.SneakerDT.AutoSize = true;
-            this.SneakerDT.BackColor = System.Drawing.Color.Transparent;
-            this.SneakerDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SneakerDT.Location = new System.Drawing.Point(4, 51);
-            this.SneakerDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SneakerDT.Name = "SneakerDT";
-            this.SneakerDT.Size = new System.Drawing.Size(89, 17);
-            this.SneakerDT.TabIndex = 0;
-            this.SneakerDT.Text = "SneakerDT";
             // 
             // rjButton1
             // 
@@ -415,13 +351,77 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateTimePicker1.CustomFormat = "YY/MM/DD";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(151, 31);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(295, 24);
+            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 1, 0, 0, 0, 0);
+            // 
+            // TatDT
+            // 
+            this.TatDT.AutoSize = true;
+            this.TatDT.BackColor = System.Drawing.Color.Transparent;
+            this.TatDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.TatDT.Location = new System.Drawing.Point(7, 52);
+            this.TatDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TatDT.Name = "TatDT";
+            this.TatDT.Size = new System.Drawing.Size(53, 17);
+            this.TatDT.TabIndex = 3;
+            this.TatDT.Text = "TatDT";
+            // 
+            // SandalDT
+            // 
+            this.SandalDT.AutoSize = true;
+            this.SandalDT.BackColor = System.Drawing.Color.Transparent;
+            this.SandalDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SandalDT.Location = new System.Drawing.Point(8, 53);
+            this.SandalDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SandalDT.Name = "SandalDT";
+            this.SandalDT.Size = new System.Drawing.Size(79, 17);
+            this.SandalDT.TabIndex = 2;
+            this.SandalDT.Text = "SandalDT";
+            // 
+            // SneakerDT
+            // 
+            this.SneakerDT.AutoSize = true;
+            this.SneakerDT.BackColor = System.Drawing.Color.Transparent;
+            this.SneakerDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SneakerDT.Location = new System.Drawing.Point(4, 51);
+            this.SneakerDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SneakerDT.Name = "SneakerDT";
+            this.SneakerDT.Size = new System.Drawing.Size(89, 17);
+            this.SneakerDT.TabIndex = 0;
+            this.SneakerDT.Text = "SneakerDT";
+            // 
+            // PhuKienDT
+            // 
+            this.PhuKienDT.AutoSize = true;
+            this.PhuKienDT.BackColor = System.Drawing.Color.Transparent;
+            this.PhuKienDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.PhuKienDT.Location = new System.Drawing.Point(7, 50);
+            this.PhuKienDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PhuKienDT.Name = "PhuKienDT";
+            this.PhuKienDT.Size = new System.Drawing.Size(89, 17);
+            this.PhuKienDT.TabIndex = 1;
+            this.PhuKienDT.Text = "PhuKienDT";
+            // 
             // fDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 550);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fDoanhThu";
             this.Text = "fDoanhThu";
             this.Load += new System.EventHandler(this.fDoanhThu_Load);
@@ -429,11 +429,11 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.customPanel2.ResumeLayout(false);
             this.customPanel2.PerformLayout();
             this.customPanel4.ResumeLayout(false);
             this.customPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.customPanel3.ResumeLayout(false);
             this.customPanel3.PerformLayout();
             this.customPanel1.ResumeLayout(false);
@@ -448,25 +448,25 @@
         private System.Windows.Forms.Label label1;
         private RJButton rjButton1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label SneakerDT;
         private System.Windows.Forms.Label TextSNK;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private CustomPanel customPanel1;
-        private System.Windows.Forms.Label SandalDT;
         private System.Windows.Forms.Label TextSD;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private CustomPanel customPanel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label TatDT;
         private System.Windows.Forms.Label TextTat;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private CustomPanel customPanel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label PhuKienDT;
         private System.Windows.Forms.Label TextPK;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private CustomPanel customPanel2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.Label PhuKienDT;
+        private System.Windows.Forms.Label TatDT;
+        private System.Windows.Forms.Label SandalDT;
+        private System.Windows.Forms.Label SneakerDT;
 
         #endregion
         // private DevExpress.XtraCharts.ChartControl chartControl1;

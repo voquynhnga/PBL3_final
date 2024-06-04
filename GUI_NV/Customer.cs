@@ -17,7 +17,6 @@ namespace PBL3.GUI_NV
 {
     public partial class Customer : Form
     {
-        Bill1 bill1 = Application.OpenForms["Bill1"] as Bill1;
         QLCH_3Entities DB = new QLCH_3Entities ();
 
         public Customer()

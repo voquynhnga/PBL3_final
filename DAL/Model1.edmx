@@ -27,6 +27,7 @@
           <Property Name="ID_LoHang" Type="int" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="Gia" Type="float" Nullable="false" />
+          <Property Name="Gia_nhap" Type="float" />
         </EntityType>
         <EntityType Name="Colors">
           <Key>
@@ -56,7 +57,7 @@
           <Property Name="DTL" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLCH_3.dbo.LichLam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="LichLam">
           <Key>
             <PropertyRef Name="CaLam" />
@@ -67,6 +68,7 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
           <Property Name="CaLam" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="NgayLam" Type="date" Nullable="false" />
           <Property Name="Luong" Type="float" Nullable="false" />
+          <Property Name="Thuong" Type="float" />
         </EntityType>
         <EntityType Name="LoaiHang">
           <Key>
@@ -277,25 +279,26 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QLCH_3ModelStoreContainer">
-          <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="ChiTietSanPham" EntityType="Self.ChiTietSanPham" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="Colors" EntityType="Self.Colors" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="LoaiHang" EntityType="Self.LoaiHang" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="LoHang" EntityType="Self.LoHang" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="Sizes" EntityType="Self.Sizes" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="DBo" store:Type="Tables" />
-          <EntitySet Name="LichLam" EntityType="Self.LichLam" store:Type="Tables" store:Schema="DBo">
+          <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChiTietSanPham" EntityType="Self.ChiTietSanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiHang" EntityType="Self.LoaiHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoHang" EntityType="Self.LoHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sizes" EntityType="Self.Sizes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LichLam" EntityType="Self.LichLam" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [LichLam].[ID_NV] AS [ID_NV], 
     [LichLam].[CaLam] AS [CaLam], 
     [LichLam].[NgayLam] AS [NgayLam], 
-    [LichLam].[Luong] AS [Luong]
-    FROM [DBo].[LichLam] AS [LichLam]</DefiningQuery>
+    [LichLam].[Luong] AS [Luong], 
+    [LichLam].[Thuong] AS [Thuong]
+    FROM [dbo].[LichLam] AS [LichLam]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__ChiTietDo__ID_CT__5812160E" Association="Self.FK__ChiTietDo__ID_CT__5812160E">
             <End Role="ChiTietSanPham" EntitySet="ChiTietSanPham" />
@@ -375,6 +378,7 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
           <Property Name="ID_LoHang" Type="Int32" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="Gia" Type="Double" Nullable="false" />
+          <Property Name="Gia_nhap" Type="Double" />
           <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK__ChiTietDo__ID_CT__5812160E" FromRole="ChiTietSanPham" ToRole="ChiTietDonHang" />
           <NavigationProperty Name="Color" Relationship="Self.FK__ChiTietSa__color__4F7CD00D" FromRole="ChiTietSanPham" ToRole="Colors" />
           <NavigationProperty Name="LoaiHang" Relationship="Self.FK__ChiTietSa__ID_Lo__4D94879B" FromRole="ChiTietSanPham" ToRole="LoaiHang" />
@@ -498,6 +502,7 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
           <Property Name="CaLam" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgayLam" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Luong" Type="Double" Nullable="false" />
+          <Property Name="Thuong" Type="Double" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__LichLam__ID_NV__38996AB5" FromRole="LichLam" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK__ChiTietDo__ID_CT__5812160E">
@@ -734,6 +739,7 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
                 <ScalarProperty Name="ID_LoHang" ColumnName="ID_LoHang" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Gia_nhap" ColumnName="Gia_nhap" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -845,6 +851,7 @@ warning 6002: The table/view 'QLCH_3.DBo.LichLam' does not have a primary key de
                 <ScalarProperty Name="CaLam" ColumnName="CaLam" />
                 <ScalarProperty Name="NgayLam" ColumnName="NgayLam" />
                 <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="Thuong" ColumnName="Thuong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

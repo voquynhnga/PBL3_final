@@ -23,7 +23,7 @@ namespace PBL3.DAL
         public int ID_LoaiHang { get; set; }
         public string Ten_LoaiHang { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShoulDBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietSanPham> ChiTietSanPhams { get; set; }
     }
 }

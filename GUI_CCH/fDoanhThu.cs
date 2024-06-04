@@ -10,6 +10,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//FIXXINGG
+
 
 namespace PBL3.GUI_CCH
 {
@@ -88,13 +90,13 @@ namespace PBL3.GUI_CCH
             double[,] a = new double[4, 2];
             foreach (ProductTypeReport i in bll.GetProductTypeReports(d1, d1))
             {
-                if (i.TenLoaiHang == "Sneaker")
+                if (i.TenLoaiHang == "Giày")
                 { a[0, 0] += i.TongTien; a[0, 1] = (i.TongTien); }
-                if (i.TenLoaiHang == "Phụ kiện")
+                if (i.TenLoaiHang == "Dép")
                 { a[1, 0] += i.TongTien; a[1, 1] = (i.TongTien); }
                 if (i.TenLoaiHang == "Sandal")
                 { a[2, 0] += i.TongTien; a[2, 1] = (i.TongTien); }
-                if (i.TenLoaiHang == "Tất")
+                if (i.TenLoaiHang == "Vớ")
                 { a[3, 0] += i.TongTien; a[3, 1] = (i.TongTien); }
             }
             double[] b = new double[4];
@@ -111,13 +113,13 @@ namespace PBL3.GUI_CCH
             }
             foreach (ProductTypeReport i in bll.GetProductTypeReports(d2, d2))
             {
-                if (i.TenLoaiHang == "Sneaker")
+                if (i.TenLoaiHang == "Giày")
                 { a[0, 0] += i.TongTien; a[0, 1] = (a[0, 1] + i.TongTien) / (b[0]); }
-                if (i.TenLoaiHang == "Phụ kiện")
+                if (i.TenLoaiHang == "Dép")
                 { a[1, 0] += i.TongTien; a[1, 1] = (a[1, 1] + i.TongTien) / (b[1]); }
                 if (i.TenLoaiHang == "Sandal")
                 { a[2, 0] += i.TongTien; a[2, 1] = (a[2, 1] + i.TongTien) / (b[2]); }
-                if (i.TenLoaiHang == "Tất")
+                if (i.TenLoaiHang == "Vớ")
                 { a[3, 0] += i.TongTien; a[3, 1] = (a[3, 1] + i.TongTien) / (b[3]); }
             }
             SneakerDT.Text = a[0, 0].ToString();

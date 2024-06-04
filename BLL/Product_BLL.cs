@@ -50,8 +50,7 @@ namespace PBL3.BLL
             .Where(x => x.z.dh.NgayBan >= d1 && x.z.dh.NgayBan <= d2)
             .Select(x => new SalesReportItem
             {
-                //FIXING28/5
-                //TenHang = DB.SanPhams.FirstOrDefault(n => x.z.t.m.product_id = n.product_id).product_name,
+                TenHang = DB.SanPhams.FirstOrDefault(n => x.z.t.m.product_id == n.product_id).product_name,
                 TenLoaiHang = x.lh.Ten_LoaiHang,
                 SoLuong = x.z.t.ct.SoLuong,
                 Gia = x.z.t.m.Gia,

@@ -18,6 +18,7 @@ namespace PBL3.DAL
         public string CaLam { get; set; }
         public System.DateTime NgayLam { get; set; }
         public double Luong { get; set; }
+        public Nullable<double> Thuong { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
     }

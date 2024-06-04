@@ -99,7 +99,7 @@ foreach (var entity in typeMapper.GetItemsToGenerate<EntityType>(itemCollection)
             if (navigationProperty.ToEndMember.RelationshipMultiplicity == RelationshipMultiplicity.Many)
             {
 #>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShoulDBeReadOnly")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 <#
             }
 #>
@@ -235,7 +235,7 @@ public void WriteHeader(CodeStringGenerator codeStringGenerator, EntityFramework
 //------------------------------------------------------------------------------
 <#=codeStringGenerator.UsingDirectives(inHeader: true)#>
 <#+
-    fileManager.EnDBlock();
+    fileManager.EndBlock();
 }
 
 public void BeginNamespace(CodeGenerationTools code)
@@ -262,7 +262,7 @@ public void EndNamespace(CodeGenerationTools code)
     }
 }
 
-public const string TemplateId = "CSharp_DBContext_Types_EF6";
+public const string TemplateId = "CSharp_DbContext_Types_EF6";
 
 public class CodeStringGenerator
 {
@@ -410,11 +410,11 @@ public class CodeStringGenerator
             callParams);
     }
     
-    public string DBSet(EntitySet entitySet)
+    public string DbSet(EntitySet entitySet)
     {
         return string.Format(
             CultureInfo.InvariantCulture,
-            "{0} virtual DBSet<{1}> {2} {{ get; set; }}",
+            "{0} virtual DbSet<{1}> {2} {{ get; set; }}",
             Accessibility.ForReadOnlyProperty(entitySet),
             _typeMapper.GetTypeName(entitySet.ElementType),
             _code.Escape(entitySet));

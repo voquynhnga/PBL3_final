@@ -26,7 +26,7 @@ namespace PBL3.DAL
         public double TongTienNhap { get; set; }
         public System.DateTime NgayNhap { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShoulDBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietSanPham> ChiTietSanPhams { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
     }

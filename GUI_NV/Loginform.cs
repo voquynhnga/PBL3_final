@@ -24,9 +24,8 @@ namespace PBL3
     {
         String query;
         private bool showPassword = false;
-       // Mainform mf = new Mainform();
-       Main_NV mf = new Main_NV();
-       Main_2 mf2 = new Main_2();
+        Main_NV mf = new Main_NV();
+        Main_2 mf2 = new Main_2();
         public TaiKhoan currentuser = new TaiKhoan
         {
             TaiKhoan1 = "",
@@ -40,14 +39,15 @@ namespace PBL3
             //KeyPreview = true;
             txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
-            
+
             // BackColor trong suốt
             labelControl1.ForeColor = System.Drawing.Color.Red;
             //labelControl1.Parent = pictureBox2;
             labelControl1.BackColor = System.Drawing.Color.Transparent;
             labelControl1.Hide();
-            
-            // ctrl = new Controller(this);
+
+            Load += Loginform_Load;
+
         }
 
 
@@ -78,7 +78,7 @@ namespace PBL3
                     this.Hide();
                     mf2.Show();
                 }
-                //this.Hide();
+
 
             }
             if (check == 1)
@@ -134,7 +134,7 @@ namespace PBL3
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             showPassword = !showPassword;
-            
+
             if (showPassword)
             {
                 txtPass.PasswordChar = '\0';
@@ -152,54 +152,31 @@ namespace PBL3
             txtPass.PasswordChar = '*';
         }
 
-        private void pic1_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
+
+
+
+
+
 
         private void Loginform_Load(object sender, EventArgs e)
         {
-
+            labelControl1.ForeColor = System.Drawing.Color.Red;
+            labelControl1.BackColor = System.Drawing.Color.Transparent;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void txtuser_TextChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void txtuser_Click(object sender, EventArgs e)
-        {
-            if(txtuser.Text == "Tên người dùng")
-            {
-                txtuser.Text = "";
-            }    
-        }
-
-        private void txtPass_Click(object sender, EventArgs e)
-        {
-            if (txtPass.Text == "Mật khẩu")
-            {
-                txtPass.Text = "";
-            }
             if (txtuser.Text == "Tên người dùng")
             {
                 txtuser.Text = "";
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

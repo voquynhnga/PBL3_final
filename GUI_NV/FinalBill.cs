@@ -78,15 +78,15 @@ namespace PBL3.GUI_NV
 
             }
             int lastID = db.DonHangs.OrderByDescending(x => x.ID_HoaDon).FirstOrDefault()?.ID_HoaDon ?? 1;
-            textBox4.Text = lastID.ToString();
-            textBox1.Text = Bill1.Instance_bill.textBox7.Text;
+            textBox4.Text = (lastID + 1).ToString();
+            textBox1.Text = Order.Instance.textBox9.Text;
         }
 
         public DonHang Get_DonHang()
         {
 
 
-            var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == Bill1.Instance_bill.textBox2.Text);
+            var kh = db.KhachHangs.FirstOrDefault(n => n.NameKH == Order.Instance.textBox8.Text);
             int nvID; // Biến để lưu ID_NV hợp lệ
             int user_ID = Controller.Instance.Get_ID(Controller.user.TaiKhoan1);
             if (Controller.user != null)
@@ -180,7 +180,6 @@ namespace PBL3.GUI_NV
             ///FIXING
             CompleteBill();
             this.Close();
-            Bill1.Instance_bill.Close();
             Order.Instance.Close();
             mf.Show();
         }

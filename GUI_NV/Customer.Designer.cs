@@ -400,7 +400,7 @@ namespace PBL3.GUI_NV
         private BindingSource khachHangBindingSource;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.TextEdit txt_sdt;
+        public DevExpress.XtraEditors.TextEdit txt_sdt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit txt_d;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
