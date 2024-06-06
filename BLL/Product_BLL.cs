@@ -87,6 +87,33 @@ namespace PBL3.BLL
 
             return query;*/
         }
+        public ChiTietSanPham GetSP_frUI(int ID, int LH_id, int LoH_id, int size_id, int color_id, double gia_ban, double gia_nhap, int SL)
+        {
+            var sp = new ChiTietSanPham
+
+            {
+
+                ID_CTSP = ID,
+
+                ID_LoaiHang = LH_id,
+                ID_LoHang = LoH_id,
+                size_id = size_id,
+                color_id = color_id,
+                Gia = gia_ban,
+                Gia_nhap = gia_nhap,
+
+                SoLuong = SL,
+
+
+
+
+
+            };
+            return sp;
+
+
+        }
+ 
 
 
 

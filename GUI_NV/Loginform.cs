@@ -22,7 +22,6 @@ namespace PBL3
 
     public partial class Loginform : Form
     {
-        String query;
         private bool showPassword = false;
         Main_NV mf = new Main_NV();
         Main_2 mf2 = new Main_2();
@@ -36,13 +35,10 @@ namespace PBL3
         public Loginform()
         {
             InitializeComponent();
-            //KeyPreview = true;
             txtuser.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
             txtPass.KeyPress += new KeyPressEventHandler(Loginform_KeyPress);
 
-            // BackColor trong suốt
             labelControl1.ForeColor = System.Drawing.Color.Red;
-            //labelControl1.Parent = pictureBox2;
             labelControl1.BackColor = System.Drawing.Color.Transparent;
             labelControl1.Hide();
 

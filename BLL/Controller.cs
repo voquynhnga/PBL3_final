@@ -243,25 +243,7 @@ namespace PBL3_qnv
         }
         public KhachHang GetKH_SearchBill(string txt)
         {
-            //DataTable dt = new DataTable();
 
-            //KhachHang cus = null;
-            //if (IsNumeric(txt))
-            //{
-            //    query = "select * from KhachHang where SDT = @Name";
-            //    SqlParameter[] pa = new SqlParameter[]
-            //    {
-            //        new SqlParameter("@Name",txt)
-            //     };
-            //    dt = DBcontrol.Instance.ExcuteQuery(query, pa);
-
-            //}
-
-            //foreach (DataRow dr in dt.Rows)
-            //{
-            //    cus = GetKH_DB(dr);
-            //}
-            //return cus;
 
             KhachHang cus = null;
 

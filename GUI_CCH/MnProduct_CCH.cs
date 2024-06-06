@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using PBL3.BLL;
 
 namespace PBL3.GUI_CCH
 {
@@ -24,11 +25,67 @@ namespace PBL3.GUI_CCH
     {
         QLCH_3Entities db = new QLCH_3Entities();
         CultureInfo culture = new CultureInfo("vi-VN");
+        //int ID_LoaiHang = 0, ID_LoHang = 0, size_id = 0, color_id = 0,   SoLuong = 0;
+        //double Gia_nhap= 0.0, Gia = 0.0;
+
+
         public MnProduct_CCH()
         {
             InitializeComponent();
 
+            //ID_LoaiHang = Convert.ToInt32(txt_LoaiHang.EditValue);
+            //ID_LoHang = Convert.ToInt32(txt_IN.EditValue);
+            //size_id = Convert.ToInt32(txt_Size.EditValue);
+            //color_id = Convert.ToInt32(txt_Mau.EditValue);
+            //Gia = Convert.ToDouble(txt_Priceout.EditValue);
+            //Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue);
+            //SoLuong = Convert.ToInt32(txt_SL.EditValue);
+
         }
+        public int ID_LoaiHang
+        {
+            get { return Convert.ToInt32(txt_LoaiHang.EditValue); }
+        }
+
+        public int ID_LoHang
+        {
+            get { return Convert.ToInt32(txt_IN.EditValue); }
+        }
+
+        public int size_id
+        {
+            get { return Convert.ToInt32(txt_Size.EditValue); }
+        }
+
+        public int color_id
+        {
+            get { return Convert.ToInt32(txt_Mau.EditValue); }
+        }
+
+        public double Gia_nhap
+        {
+            get
+            {
+                string value = txt_Pricein.EditValue.ToString();
+                value = value.Replace(" đ", "").Replace(".", "");
+                return Convert.ToDouble(value);
+            }
+        }
+
+        public double Gia
+        {
+            get
+            {
+                string value = txt_Priceout.EditValue.ToString();
+                value = value.Replace(" đ", "").Replace(".", "");
+                return Convert.ToDouble(value);
+            }
+        }
+        public int SoLuong
+        {
+            get { return Convert.ToInt32(txt_SL.EditValue); }
+        }
+
 
         private List<ProductInCM> products = new List<ProductInCM>();
 
@@ -96,29 +153,11 @@ namespace PBL3.GUI_CCH
             if (gv.IsDataRow(gv.FocusedRowHandle))
 
             {
-
-                var spEdit = new ChiTietSanPham
-
-                {
-
-                    ID_CTSP = (gv.GetFocusedRow() as ChiTietSanPham).ID_CTSP,
-
-                    ID_LoaiHang = Convert.ToInt32(txt_LoaiHang.EditValue),
-                    ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
-                    size_id = Convert.ToInt32(txt_Size.EditValue),
-                    color_id = Convert.ToInt32(txt_Mau.EditValue),
-                    Gia = Convert.ToDouble(txt_Priceout.EditValue),
-                    Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue),
+                int ID_CTSP = (gv.GetFocusedRow() as ChiTietSanPham).ID_CTSP;
 
 
+                var spEdit = Product_BLL.Instance.GetSP_frUI(ID_CTSP, ID_LoaiHang, ID_LoHang, size_id, color_id, Gia, Gia_nhap, SoLuong);
 
-                    SoLuong = Convert.ToInt32(txt_SL.EditValue),
-
-
-
-               
-
-                };
 
                 var existingSP = db.ChiTietSanPhams.FirstOrDefault(n => n.ID_CTSP == spEdit.ID_CTSP);
 
@@ -153,37 +192,35 @@ namespace PBL3.GUI_CCH
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {//ADD
+            var gv = gridView1;
 
+            if (gv.IsDataRow(gv.FocusedRowHandle))
 
-            int lastID = db.ChiTietSanPhams.OrderByDescending(x => x.ID_CTSP).FirstOrDefault()?.ID_CTSP ?? 0;
-            if(Convert.ToDouble(txt_Pricein.EditValue) > Convert.ToDouble(txt_Priceout.EditValue))
             {
-                label1.Text = "Giá bán phải cao hơn giá nhập!";
-                txt_Priceout.Focus();
+                int ID_CTSP = (gv.GetFocusedRow() as ChiTietSanPham).ID_CTSP;
+
+                var existingSP = db.ChiTietSanPhams.FirstOrDefault(n => n.ID_CTSP == ID_CTSP);
+                if (existingSP != null)
+                {
+                    MessageBox.Show("Sản phẩm này đã tồn tại!");
+                }
+                else
+                {
+
+                    int lastID = db.ChiTietSanPhams.OrderByDescending(x => x.ID_CTSP).FirstOrDefault()?.ID_CTSP ?? 1;
+                    if (Gia_nhap > Gia)
+                    {
+                        label1.Text = "Giá bán phải cao hơn giá nhập!";
+                        txt_Priceout.Focus();
+                    }
+
+                    var sp = Product_BLL.Instance.GetSP_frUI(lastID + 1, ID_LoaiHang, ID_LoHang, size_id, color_id, Gia, Gia_nhap, SoLuong);
+
+                    db.ChiTietSanPhams.Add(sp);
+                    db.SaveChanges();
+                    MnProduct_CCH_Load(sender, e);
+                }
             }
-
-            ChiTietSanPham sp = new ChiTietSanPham
-            {
-
-
-
-                ID_CTSP = lastID + 1,
-                ID_LoaiHang = Convert.ToInt32(txt_LoaiHang.EditValue),
-                product_id = Convert.ToInt32(txt_TenSP.EditValue),
-                size_id = Convert.ToInt32(txt_Size.EditValue),
-                color_id = Convert.ToInt32(txt_Mau.EditValue),
-                ID_LoHang = Convert.ToInt32(txt_IN.EditValue),
-                SoLuong = Convert.ToInt32(txt_SL.EditValue),
-                Gia = Convert.ToDouble(txt_Priceout.EditValue),
-                Gia_nhap = Convert.ToDouble(txt_Pricein.EditValue),
-
-
-
-
-            };
-            db.ChiTietSanPhams.Add(sp);
-            db.SaveChanges();
-            MnProduct_CCH_Load(sender, e);
         }
   
 
@@ -257,11 +294,12 @@ namespace PBL3.GUI_CCH
                 txt_TenSP.EditValue = sp.product_id;
                 txt_SL.EditValue = sp.SoLuong;
                 txt_IN.EditValue = sp.ID_LoHang;
-                txt_Priceout.EditValue =  sp.Gia.ToString("C", culture);          
+                txt_Priceout.EditValue = sp.Gia.ToString("N0", culture) + " đ";
                 txt_Mau.EditValue = sp.color_id;
                 txt_LoaiHang.EditValue = sp.ID_LoaiHang;
                 txt_Size.EditValue = sp.size_id;
-                txt_Pricein.EditValue = sp.Gia_nhap.ToString("C", culture);
+                txt_Pricein.EditValue = sp.Gia_nhap.ToString("N0", culture) + " đ";
+
 
 
             }
@@ -297,28 +335,21 @@ namespace PBL3.GUI_CCH
 
         private void txt_Pricein_EditValueChanged(object sender, EventArgs e)
         {
-
-
             if (double.TryParse(txt_Pricein.Text, NumberStyles.Currency, new CultureInfo("vi-VN"), out double result))
             {
-
-                txt_Pricein.Text = result.ToString("C", new CultureInfo("vi-VN"));
-
-                txt_Priceout.Select(txt_Pricein.Text.Length, 0);
-
+                txt_Pricein.Text = result.ToString("N0", new CultureInfo("vi-VN")) + " đ"; // Thêm " đ" vào cuối
+                txt_Pricein.Select(txt_Pricein.Text.Length, 0); // Để di chuyển con trỏ về cuối txt_Pricein
             }
         }
 
-            private void txt_Priceout_EditValueChanged(object sender, EventArgs e)
+        private void txt_Priceout_EditValueChanged(object sender, EventArgs e)
         {
             if (double.TryParse(txt_Priceout.Text, NumberStyles.Currency, new CultureInfo("vi-VN"), out double result))
             {
-
-                txt_Priceout.Text = result.ToString("C", new CultureInfo("vi-VN"));
-
-                txt_Priceout.Select(txt_Priceout.Text.Length, 0); // Để di chuyển con trỏ về cuối txt_Pricein
-
+                txt_Priceout.Text = result.ToString("N0", new CultureInfo("vi-VN")) + " đ"; // Thêm " đ" vào cuối
+                txt_Priceout.Select(txt_Priceout.Text.Length, 0); // Để di chuyển con trỏ về cuối txt_Priceout
             }
         }
+
     }
 }

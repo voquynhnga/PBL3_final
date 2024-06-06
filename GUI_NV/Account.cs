@@ -15,7 +15,7 @@ namespace PBL3_qnv.GUI
     public partial class Account : Form
     {
         QLCH_3Entities pbl = new QLCH_3Entities ();
-        //TaiKhoan currentUser = Controller.user;
+        TaiKhoan currentUser = Controller.user;
 
 
 
@@ -56,17 +56,17 @@ namespace PBL3_qnv.GUI
             textBox5.ReadOnly = true;
             textBox6.ReadOnly = true;
 
-            //textBox1.Text = textBox1.Text;
+            textBox1.Text = textBox1.Text;
 
-            //textBox2.Text = textBox2.Text;
+            textBox2.Text = textBox2.Text;
 
-            //textBox3.Text = textBox3.Text;
+            textBox3.Text = textBox3.Text;
 
-            //textBox4.Text = textBox4.Text;
-            //dateTimePicker1.Value = dateTimePicker1.Value;
-            //textBox5.Text = textBox5.Text;
+            textBox4.Text = textBox4.Text;
+            dateTimePicker1.Value = dateTimePicker1.Value;
+            textBox5.Text = textBox5.Text;
 
-            //textBox6.Text = textBox6.Text;
+            textBox6.Text = textBox6.Text;
             Controller.Instance.Savein4_NV(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, dateTimePicker1.Value, textBox5.Text, textBox6.Text);
 
 
@@ -75,14 +75,14 @@ namespace PBL3_qnv.GUI
         void Load_Information()
         {
 
-            /*NhanVien nv = Controller.Instance.Get_NV(currentUser);
+            NhanVien nv = Controller.Instance.Get_NV(currentUser);
             textBox1.Text = nv.NameNV.ToString();
             textBox2.Text = nv.SDT.ToString();
             textBox3.Text = nv.Email.ToString();
             textBox4.Text = nv.GT.ToString();
             dateTimePicker1.Value = nv.NS;
             textBox5.Text = nv.CCCD.ToString();
-            textBox6.Text = currentUser.Loai_TK.ToString();*/
+            textBox6.Text = currentUser.Loai_TK.ToString();
 
 
 
@@ -106,10 +106,6 @@ namespace PBL3_qnv.GUI
 
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Account_Load(object sender, EventArgs e)
         {
@@ -135,14 +131,6 @@ namespace PBL3_qnv.GUI
             textBox1.BackColor = System.Drawing.Color.Red;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
