@@ -47,6 +47,7 @@
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -56,7 +57,7 @@
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(264, 39);
-            this.container.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.container.Margin = new System.Windows.Forms.Padding(12);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(829, 683);
             this.container.TabIndex = 0;
@@ -70,7 +71,7 @@
             this.accordionControlElement9,
             this.accordionControlElement10});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(12);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(264, 683);
@@ -112,6 +113,7 @@
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6,
+            this.accordionControlElement14,
             this.accordionControlElement7,
             this.accordionControlElement8});
             this.accordionControlElement5.Expanded = true;
@@ -193,6 +195,13 @@
             // 
             this.fluentFormDefaultManager1.Form = this;
             // 
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement14.Text = "Tài khoản nhân viên";
+            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click);
+            // 
             // Main_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -231,5 +240,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
     }
 }

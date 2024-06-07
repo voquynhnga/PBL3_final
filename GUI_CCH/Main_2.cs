@@ -102,6 +102,11 @@ namespace PBL3.GUI_CCH
         {
             OpenChildForm(new Salary());
         }
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TKNV());
+        }
     }
 }
 

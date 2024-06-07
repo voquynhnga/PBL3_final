@@ -11,6 +11,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,26 +42,38 @@ namespace PBL3_qnv
             }
             private set { }
         }
+        //Mã hóa mk md5
+        public string encryption(string password)
+        {
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] encrypt;
+            UTF8Encoding encode = new UTF8Encoding();
+            encrypt = md5.ComputeHash(encode.GetBytes(password));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < encrypt.Length; i++)
+            {
+                sb.Append(encrypt[i].ToString());
+            }
+            return sb.ToString();
+        }
 
         public int Check_user(TaiKhoan user)
-
         {
-
-
-
             var userFromDB = db.TaiKhoans.Where(t => t.TaiKhoan1 == user.TaiKhoan1).FirstOrDefault();
+            string pass_encrypted = encryption(user.MatKhau);
 
             if (userFromDB != null)
 
             {
 
-                if (userFromDB.MatKhau == user.MatKhau)
+                if (userFromDB.MatKhau == /*pass_encrypted*/ user.MatKhau)
 
                 {
 
                     return 0;
 
                 }
+               
 
                 else if (user.MatKhau.Length != 8 || !IsNumeric(user.MatKhau))
 
@@ -144,7 +157,7 @@ namespace PBL3_qnv
 
         }
 
-        private bool IsNumeric(string input)
+        public bool IsNumeric(string input)
 
         {
 

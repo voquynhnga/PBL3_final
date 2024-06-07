@@ -56,7 +56,7 @@
             this.bLogin.FlatAppearance.BorderSize = 0;
             this.bLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bLogin.ForeColor = System.Drawing.Color.Black;
-            this.bLogin.Location = new System.Drawing.Point(280, 334);
+            this.bLogin.Location = new System.Drawing.Point(247, 406);
             this.bLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bLogin.Name = "bLogin";
             this.bLogin.Size = new System.Drawing.Size(213, 57);
@@ -70,7 +70,7 @@
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPass.Location = new System.Drawing.Point(203, 210);
+            this.txtPass.Location = new System.Drawing.Point(203, 280);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(311, 27);
             this.txtPass.TabIndex = 9;
@@ -82,7 +82,7 @@
             this.txtuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtuser.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtuser.Location = new System.Drawing.Point(203, 155);
+            this.txtuser.Location = new System.Drawing.Point(203, 225);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(311, 27);
             this.txtuser.TabIndex = 8;
@@ -97,7 +97,7 @@
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(203, 244);
+            this.labelControl1.Location = new System.Drawing.Point(203, 314);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(583, 27);
@@ -108,7 +108,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(476, 210);
+            this.pictureBox1.Location = new System.Drawing.Point(476, 280);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +123,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(203, 63);
+            this.labelControl2.Location = new System.Drawing.Point(233, 132);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(244, 48);
@@ -137,7 +137,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(239, 463);
+            this.panelControl1.Size = new System.Drawing.Size(239, 603);
             this.panelControl1.TabIndex = 17;
             // 
             // pictureEdit1
@@ -149,7 +149,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(235, 459);
+            this.pictureEdit1.Size = new System.Drawing.Size(235, 599);
             this.pictureEdit1.TabIndex = 0;
             // 
             // panelControl2
@@ -166,14 +166,14 @@
             this.panelControl2.Location = new System.Drawing.Point(239, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(799, 463);
+            this.panelControl2.Size = new System.Drawing.Size(799, 603);
             this.panelControl2.TabIndex = 18;
             // 
             // Loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 463);
+            this.ClientSize = new System.Drawing.Size(1038, 603);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

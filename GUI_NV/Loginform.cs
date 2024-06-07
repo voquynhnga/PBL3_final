@@ -134,7 +134,9 @@ namespace PBL3
             if (showPassword)
             {
                 txtPass.PasswordChar = '\0';
-                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Resources\\eye_flaticon.png");
+
+                    pictureBox1.Image = new Bitmap(Application.StartupPath + "\\Image\\eye_flaticon.png");
+                
             }
             else
             {
@@ -146,17 +148,9 @@ namespace PBL3
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
             txtPass.PasswordChar = '*';
+            txtPass.ForeColor = System.Drawing.Color.Black;
+
         }
-
-
-
-
-
-
-
-
-
-
         private void Loginform_Load(object sender, EventArgs e)
         {
             labelControl1.ForeColor = System.Drawing.Color.Red;
@@ -167,12 +161,12 @@ namespace PBL3
 
         private void txtuser_TextChanged(object sender, EventArgs e)
         {
-            if (txtuser.Text == "Tên người dùng")
-            {
-                txtuser.Text = "";
-            }
+            //if (txtuser.Text == "Tên người dùng")
+            //{
+                //txtuser.Text = "";
+                txtuser.ForeColor = System.Drawing.Color.Black;
+           // }
         }
-
 
     }
 }

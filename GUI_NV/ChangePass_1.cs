@@ -16,7 +16,7 @@ namespace PBL3.GUI_NV
     public partial class ChangePass_1 : Form
     {
         private Loginform lg;
-        //private TaiKhoan currentUser = Controller.user;
+        private TaiKhoan currentUser = Controller.user;
         private bool showPassword = false;
 
         public ChangePass_1()
@@ -26,8 +26,6 @@ namespace PBL3.GUI_NV
             textBox2.KeyPress += new KeyPressEventHandler(ChangePass_KeyPress);
             textBox3.KeyPress += new KeyPressEventHandler(ChangePass_KeyPress);
 
-            //Chữ thông báo ở dưới mật khẩu
-            labelControl1.Hide();
             labelControl1.Parent = pictureEdit1;
             labelControl1.BackColor = System.Drawing.Color.Transparent;
             labelControl1.ForeColor = System.Drawing.Color.Red;
@@ -44,55 +42,54 @@ namespace PBL3.GUI_NV
             label3.Parent = pictureEdit1;
             label3.BackColor = System.Drawing.Color.Transparent;
 
-            /*circularPictureBox1.Parent = pictureEdit1;
-            circularPictureBox1.BackColor = System.Drawing.Color.Transparent;*/
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //TaiKhoan t = new TaiKhoan()
-            //{
-            //    TaiKhoan1 = currentUser.TaiKhoan1,
-            //    MatKhau = textBox3.Text
-            //};
-            //int check = Controller.Instance.Check_user(currentUser);
-            //int check1 = Controller.Instance.Check_user(t);
+            TaiKhoan t = new TaiKhoan()
+            {
+                TaiKhoan1 = currentUser.TaiKhoan1,
+                MatKhau = textBox3.Text
+            };
+            int check = Controller.Instance.Check_user(currentUser);
+            int check1 = Controller.Instance.Check_user(t);
 
-            //if (textBox3.Text == textBox2.Text && check == 0)
-            //{
-            //    MessageBox.Show("Đổi mật khẩu thành công!");
-            //    Controller.Instance.SavePass(t);
-            //}
-            //else if (check == 2)
-            //{
-                  labelControl1.Show();
-                  labelControl1.Text = "Mật khẩu cũ không chính xác!";
-            //    textBox1.Text = "";
+            if (textBox3.Text == textBox2.Text && check == 0 && textBox2.Text != "" && textBox3.Text != "")
+            {
+                MessageBox.Show("Đổi mật khẩu thành công!");
+                Controller.Instance.SavePass(t);
+            }
+            else if (check == 2)
+            {
+                labelControl1.Show();
+                labelControl1.Text = "Mật khẩu cũ không chính xác!";
+                textBox1.Text = "";
+                textBox1.Focus();
 
-            //}
-            //else if (check1 == 1)
-            //{
-                  labelControl1.Show();
-                  labelControl1.Text = "Vui lòng nhập mật khẩu mới có độ dài 8 kí tự và chỉ chứa số!";
-            //    textBox2.Text = "";
-            //    textBox3.Text = "";
+            }
+            else if (check1 == 1)
+            {
+                labelControl1.Show();
+                labelControl1.Text = "Vui lòng nhập mật khẩu mới có độ dài 8 kí tự và chỉ chứa số!";
+                textBox2.Text = "";
+                textBox3.Text = "";
 
-            //}
-            //else if (textBox3.Text != textBox2.Text)
-            //{
-                  labelControl1.Show();
-                  labelControl1.Text = "Mật khẩu mới không trùng nhau!!!";
-            //    textBox1.Text = "";
-            //    textBox2.Text = "";
-            //    textBox3.Text = "";
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Đổi mật khẩu thất bại!");
-            //    textBox2.Text = "";
-            //    textBox3.Text = "";
-            //}
+            }
+            else if (textBox3.Text != textBox2.Text)
+            {
+                labelControl1.Show();
+                labelControl1.Text = "Mật khẩu mới không trùng nhau!!!";
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Đổi mật khẩu thất bại!");
+                textBox2.Text = "";
+                textBox3.Text = "";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
