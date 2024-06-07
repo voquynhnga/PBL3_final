@@ -336,7 +336,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="DAL\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -360,11 +359,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -378,12 +372,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Resources\bear.png" />
-    <None Include="bin\Debug\Resources\wellcome.png" />
-    <None Include="bin\Debug\Resources\anhnen.png" />
-    <None Include="bin\Debug\Resources\eye.png" />
-    <None Include="bin\Debug\Resources\user.png" />
-    <None Include="Resources\calendar.png" />
+    <None Include="Resources\bear.png" />
+    <None Include="Resources\wellcome.png" />
+    <None Include="Resources\anhnen.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\user.png" />
     <Content Include="DAL\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -394,10 +387,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Resources\eye_flaticon.png" />
     <None Include="Image\Coffee Plese.png" />
     <None Include="Image\R.jpg" />
-    <None Include="Resources\R.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
