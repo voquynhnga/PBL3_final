@@ -152,133 +152,133 @@
     <Compile Include="DTO_bs\ProductTypeReport.cs" />
     <Compile Include="DTO_bs\SalesReportItem.cs" />
     <Compile Include="DTO_bs\Item.cs" />
-    <Compile Include="GUI_CCH\CustomPanel.cs">
+    <Compile Include="GUI\GUI_CCH\CustomToolbox\CustomPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\fDoanhThu.cs">
+    <Compile Include="GUI\GUI_CCH\fDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\fDoanhThu.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\fDoanhThu.Designer.cs">
       <DependentUpon>fDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\Main_2.cs">
+    <Compile Include="GUI\GUI_CCH\Main_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\Main_2.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\Main_2.Designer.cs">
       <DependentUpon>Main_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\MnIngoing.cs">
+    <Compile Include="GUI\GUI_CCH\MnIngoing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\MnIngoing.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\MnIngoing.Designer.cs">
       <DependentUpon>MnIngoing.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\MnEmployee.cs">
+    <Compile Include="GUI\GUI_CCH\MnEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\MnEmployee.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\MnEmployee.Designer.cs">
       <DependentUpon>MnEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\MnProduct_CCH.cs">
+    <Compile Include="GUI\GUI_CCH\MnProduct_CCH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\MnProduct_CCH.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\MnProduct_CCH.Designer.cs">
       <DependentUpon>MnProduct_CCH.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\mnSupplier.cs">
+    <Compile Include="GUI\GUI_CCH\mnSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\mnSupplier.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\mnSupplier.Designer.cs">
       <DependentUpon>mnSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\RJButton.cs">
+    <Compile Include="GUI\GUI_CCH\CustomToolbox\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\Salary.cs">
+    <Compile Include="GUI\GUI_CCH\Salary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\Salary.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\Salary.Designer.cs">
       <DependentUpon>Salary.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\Shift_CCH.cs">
+    <Compile Include="GUI\GUI_CCH\Shift_CCH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\Shift_CCH.Designer.cs">
+    <Compile Include="GUI\GUI_CCH\Shift_CCH.Designer.cs">
       <DependentUpon>Shift_CCH.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CCH\TKNV.cs">
+    <Compile Include="GUI\GUI_CCH\TKNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CCH\TKNV.designer.cs">
+    <Compile Include="GUI\GUI_CCH\TKNV.designer.cs">
       <DependentUpon>TKNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\CircularButton.cs">
+    <Compile Include="GUI\GUI_CCH\CustomToolbox\CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI_NV\CircularPictureBox.cs">
+    <Compile Include="GUI\GUI_CCH\CustomToolbox\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI_NV\CircularPictureEdit.cs">
+    <Compile Include="GUI\GUI_CCH\CustomToolbox\CircularPictureEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI_NV\ReBox.cs">
+    <Compile Include="GUI\GUI_NV\ReBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\ReBox.Designer.cs">
+    <Compile Include="GUI\GUI_NV\ReBox.Designer.cs">
       <DependentUpon>ReBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Shift.cs">
+    <Compile Include="GUI\GUI_NV\Shift.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Shift.Designer.cs">
+    <Compile Include="GUI\GUI_NV\Shift.Designer.cs">
       <DependentUpon>Shift.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Account.cs">
+    <Compile Include="GUI\GUI_General\Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Account.Designer.cs">
+    <Compile Include="GUI\GUI_General\Account.Designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\ChangePass_1.cs">
+    <Compile Include="GUI\GUI_General\ChangePass_1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\ChangePass_1.Designer.cs">
+    <Compile Include="GUI\GUI_General\ChangePass_1.Designer.cs">
       <DependentUpon>ChangePass_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Customer.cs">
+    <Compile Include="GUI\GUI_NV\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Customer.Designer.cs">
+    <Compile Include="GUI\GUI_NV\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\FinalBill.cs">
+    <Compile Include="GUI\GUI_NV\FinalBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\FinalBill.Designer.cs">
+    <Compile Include="GUI\GUI_NV\FinalBill.Designer.cs">
       <DependentUpon>FinalBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Loginform.cs">
+    <Compile Include="GUI\GUI_General\Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Loginform.Designer.cs">
+    <Compile Include="GUI\GUI_General\Loginform.Designer.cs">
       <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Main_NV.cs">
+    <Compile Include="GUI\GUI_NV\Main_NV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Main_NV.Designer.cs">
+    <Compile Include="GUI\GUI_NV\Main_NV.Designer.cs">
       <DependentUpon>Main_NV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\ManageProduct.cs">
+    <Compile Include="GUI\GUI_NV\ManageProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\ManageProduct.Designer.cs">
+    <Compile Include="GUI\GUI_NV\ManageProduct.Designer.cs">
       <DependentUpon>ManageProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NV\Order.cs">
+    <Compile Include="GUI\GUI_NV\Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NV\Order.Designer.cs">
+    <Compile Include="GUI\GUI_NV\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -288,62 +288,61 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Security\SecurityContext.cs" />
-    <EmbeddedResource Include="GUI_CCH\fDoanhThu.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\fDoanhThu.resx">
       <DependentUpon>fDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\Main_2.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\Main_2.resx">
       <DependentUpon>Main_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\MnIngoing.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\MnIngoing.resx">
       <DependentUpon>MnIngoing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\MnEmployee.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\MnEmployee.resx">
       <DependentUpon>MnEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\MnProduct_CCH.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\MnProduct_CCH.resx">
       <DependentUpon>MnProduct_CCH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\mnSupplier.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\mnSupplier.resx">
       <DependentUpon>mnSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\Salary.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\Salary.resx">
       <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\Shift_CCH.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\Shift_CCH.resx">
       <DependentUpon>Shift_CCH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CCH\TKNV.resx">
+    <EmbeddedResource Include="GUI\GUI_CCH\TKNV.resx">
       <DependentUpon>TKNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\ReBox.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\ReBox.resx">
       <DependentUpon>ReBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Shift.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\Shift.resx">
       <DependentUpon>Shift.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Account.resx">
+    <EmbeddedResource Include="GUI\GUI_General\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\ChangePass_1.resx">
+    <EmbeddedResource Include="GUI\GUI_General\ChangePass_1.resx">
       <DependentUpon>ChangePass_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Customer.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\FinalBill.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\FinalBill.resx">
       <DependentUpon>FinalBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Loginform.resx">
+    <EmbeddedResource Include="GUI\GUI_General\Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Main_NV.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\Main_NV.resx">
       <DependentUpon>Main_NV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\ManageProduct.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\ManageProduct.resx">
       <DependentUpon>ManageProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NV\Order.resx">
+    <EmbeddedResource Include="GUI\GUI_NV\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -389,7 +388,6 @@
   <ItemGroup>
     <None Include="Resources\eye_flaticon.png" />
     <None Include="Resources\bear.png" />
-    <None Include="Resources\wellcome.png" />
     <None Include="Resources\anhnen.png" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\user.png" />

@@ -14,7 +14,7 @@ namespace PBL3.DTO_bs
         public string Color { get; set; }
         public double Price { get; set; }
         public int SL { get; set; }
-        public static int Width = 200;
+        public static int Width = 350 ;
         public static int Height = 80;
     }
 }

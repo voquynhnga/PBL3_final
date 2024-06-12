@@ -66,7 +66,7 @@ namespace PBL3_qnv
 
             {
 
-                if (userFromDB.MatKhau == /*pass_encrypted*/ user.MatKhau)
+                if (userFromDB.MatKhau == pass_encrypted)
 
                 {
 
@@ -75,7 +75,7 @@ namespace PBL3_qnv
                 }
                
 
-                else if (user.MatKhau.Length != 8 || !IsNumeric(user.MatKhau))
+                else if ( !IsNumeric(user.MatKhau))
 
                 {
 
@@ -279,6 +279,22 @@ namespace PBL3_qnv
 
 
 
+        }
+        public long ParseCurrency(string text)
+        {
+            string cleanedText = text.Replace("đ", "").Replace(",", "").Trim();
+            return long.Parse(cleanedText);
+        }
+
+        public string FormatCurrency(long value)
+        {
+            return string.Format("{0:N0} đ", value);
+        }
+        public void Update_DTL_KH(string a)
+        {
+            var kh = db.KhachHangs.FirstOrDefault(k => k.NameKH.Trim() == a.Trim());
+            kh.DTL = 0;
+            db.SaveChanges();
         }
 
 
